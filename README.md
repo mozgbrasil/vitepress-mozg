@@ -29,6 +29,8 @@ Copyright (c) 2019-present, Yuxi (Evan) You
 
 ## Development
 
+https://dnschecker.org/
+
 ```bash
 
 

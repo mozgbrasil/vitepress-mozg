@@ -162,22 +162,23 @@ export const shared = defineConfig({
   // SEO Improvement - JSON-LD
 
   transformPageData(pageData) {
-    const canonicalUrl = `https://example.com/${pageData.relativePath}`
+    const canonicalUrl = `https://mozg.com.br/${pageData.relativePath}`
       .replace(/index\.md$/, '')
       .replace(/\.md$/, '.html')
 
-    pageData.frontmatter.head ??= []
-    pageData.frontmatter.head.push([
-      'link',
-      { rel: 'canonical', href: canonicalUrl }
-    ])
-
-    return {
+    const res = {
       frontmatter: {
         ...pageData.frontmatter,
-        head: [['script', { type: 'application/ld+json' }, getJSONLD(pageData)]]
+        head: [
+          ['link', { rel: 'canonical', href: canonicalUrl }],
+          ['script', { type: 'application/ld+json' }, getJSONLD(pageData)]
+        ]
       }
     }
+
+    console.log({ pageData, res })
+
+    return res
   }
 })
 

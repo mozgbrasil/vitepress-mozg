@@ -1,7 +1,7 @@
 ---
 title: Mozg
 titleTemplate: O que é Mozg
-description: Sistemas e informação
+description: Meu nome é Marcio, venho desenvolvendo software desde 1999, estou sempre me mantendo atualizado a fim de adotar as melhores práticas e oferecer um excelente serviço prezando por desenvolver tecnologia que agreguem valor, automação e lucratividade.
 ---
 
 # O que é Mozg?

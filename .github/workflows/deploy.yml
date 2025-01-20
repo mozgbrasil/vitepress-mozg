@@ -1,0 +1,41 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Defina sua branch de produção aqui
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout do código
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Configuração do Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # ou a versão que você está usando
+
+      # Instalar dependências
+      - name: Install dependencies
+        run: npm install
+
+      # Rodar o build do Vite
+      - name: Build project
+        run: npm run build
+
+      # Copiar o arquivo CNAME para o diretório dist
+      - name: Copy CNAME file
+        run: cp CNAME dist/
+
+      # Deploy para o GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages # ou a branch onde você quer publicar
+          folder: dist # pasta de saída do build do Vite
+          token: ${{ secrets.GITHUB_TOKEN }} # Token do GitHub Actions (geralmente já está disponível)

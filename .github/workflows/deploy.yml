@@ -37,5 +37,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages # ou a branch onde você quer publicar
-          folder: dist # pasta de saída do build do Vite
+          folder: docs/.vitepress/dist/ # pasta de saída do build do Vite
           token: ${{ secrets.GITHUB_TOKEN }} # Token do GitHub Actions (geralmente já está disponível)

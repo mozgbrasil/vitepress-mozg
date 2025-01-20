@@ -18,7 +18,7 @@ hero:
       link: /guide/getting-started
     - theme: alt
       text: GitHub
-      link: https://github.com/mozgbrasil/vitepress
+      link: https://github.com/mozgbrasil/vitepress-mozg
   image:
     src: /logo-large.webp
     alt: Mozg

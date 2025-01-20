@@ -18,7 +18,8 @@ export const pt = defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/mozgbrasil/vitepress/edit/main/docs/:path',
+      pattern:
+        'https://github.com/mozgbrasil/vitepress-mozg/edit/main/docs/:path',
       text: 'Edite esta página no GitHub'
     },
 
@@ -51,11 +52,11 @@ function nav(): DefaultTheme.NavItem[] {
       items: [
         {
           text: 'Changelog',
-          link: 'https://github.com/mozgbrasil/vitepress/blob/main/CHANGELOG.md'
+          link: 'https://github.com/mozgbrasil/vitepress-mozg/blob/main/CHANGELOG.md'
         },
         {
           text: 'Contributing',
-          link: 'https://github.com/mozgbrasil/vitepress/blob/main/.github/contributing.md'
+          link: 'https://github.com/mozgbrasil/vitepress-mozg/blob/main/.github/contributing.md'
         }
       ]
     }

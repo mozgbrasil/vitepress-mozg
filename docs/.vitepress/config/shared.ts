@@ -28,7 +28,7 @@ export const shared = defineConfig({
       }
     ],
     config(md) {
-      // TODO: remove when https://github.com/mozgbrasil/vitepress/issues/4431 is fixed
+      // TODO: remove when https://github.com/mozgbrasil/vitepress-mozg/issues/4431 is fixed
       const fence = md.renderer.rules.fence!
       md.renderer.rules.fence = function (tokens, idx, options, env, self) {
         const { localeIndex = 'root' } = env
@@ -128,7 +128,7 @@ export const shared = defineConfig({
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/mozgbrasil/vitepress'
+        link: 'https://github.com/mozgbrasil/vitepress-mozg'
       }
     ],
 
@@ -176,7 +176,7 @@ export const shared = defineConfig({
       }
     }
 
-    console.log({ pageData, res })
+    // console.log({ pageData, res })
 
     return res
   }

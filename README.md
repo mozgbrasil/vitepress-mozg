@@ -31,6 +31,8 @@ Copyright (c) 2019-present, Yuxi (Evan) You
 
 https://dnschecker.org/
 
+https://search.google.com/search-console/index/drilldown?resource_id=sc-domain%3Amozg.com.br&item_key=CAMYCyAC&hl=pt
+
 ```bash
 
 

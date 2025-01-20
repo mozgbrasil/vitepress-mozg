@@ -1,3 +1,9 @@
+---
+title: Mozg
+titleTemplate: Experimente
+description: Experimente Online
+---
+
 # Experimente {#getting-started}
 
 ## Experimente Online {#try-it-online}

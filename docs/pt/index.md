@@ -3,6 +3,7 @@ layout: home
 
 title: Mozg
 titleTemplate: Sistemas e informação
+description: O futuro é agora ✨
 
 hero:
   name: Mozg

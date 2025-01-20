@@ -1,5 +1,9 @@
 ---
 outline: deep
+
+title: Mozg
+titleTemplate: Mobile apps
+description: Sistemas e informação
 ---
 
 <mozg-naim-portfolio></mozg-naim-portfolio>

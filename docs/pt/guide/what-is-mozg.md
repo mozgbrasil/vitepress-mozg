@@ -1,3 +1,9 @@
+---
+title: Mozg
+titleTemplate: O que é Mozg
+description: Sistemas e informação
+---
+
 # O que é Mozg?
 
 Se trata de um projeto criado em Fevereiro de 2016 por <a href="https://mozg.com.br/jekyll/curriculum.pdf">Marcio dos Santos Amorim</a>

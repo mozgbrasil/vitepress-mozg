@@ -1,5 +1,9 @@
 ---
 outline: deep
+
+title: Mozg
+titleTemplate: Web Components
+description: Sistemas e informação
 ---
 
 # Web Components

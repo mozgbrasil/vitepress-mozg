@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig, PageData } from 'vitepress'
 
 import {
   groupIconMdPlugin,
@@ -79,11 +79,48 @@ export const shared = defineConfig({
     ['meta', { property: 'og:url', content: 'https://mozg.com.br/' }],
     // ['script', { src: 'https://cdn.usefathom.com/script.js', 'data-site': 'AZBRSFGG', 'data-spa': 'auto', defer: '' }],
     ['link', { rel: 'manifest',  href: '/manifest.json' }],
-    // ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.19' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components' }],
     // ['script', { src: 'https://platform.linkedin.com/badges/js/profile.js' }],
     // ['script', { type: 'module', src: 'http://localhost:5173/src/web-components/index.ts' }]
-    ['script', { type: 'module', src: 'mozg-web-components.es.js' }]
-   ],
+    // ['script', { type: 'module', src: 'mozg-web-components.es.js' }],
+    // 
+    // https://vitepress.dev/reference/site-config#example-registering-a-service-worker
+    [
+      'script',
+      { id: 'register-sw' },
+      `;(() => {
+      
+        // Registrar o Service Worker
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then((registration) => {
+              console.log("Service Worker registrado com sucesso:", registration);
+            })
+            .catch((error) => {
+              console.error("Falha ao registrar o Service Worker:", error);
+            });
+        }
+
+      })()`
+    ] ,
+
+    // https://vitepress.dev/reference/site-config#example-using-google-analytics
+
+    [
+      'script',
+      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=UA-73869264-1' }
+    ],
+    [
+      'script',
+      {},
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-73869264-1');`
+    ],
+    // 
+  ],
 
   themeConfig: {
     logo: { src: '/logo-mini.svg', width: 24, height: 24 },
@@ -120,5 +157,63 @@ export const shared = defineConfig({
         }
       })
     ]
+  },
+
+  // SEO Improvement - JSON-LD
+
+  transformPageData(pageData) {
+    const canonicalUrl = `https://example.com/${pageData.relativePath}`
+      .replace(/index\.md$/, '')
+      .replace(/\.md$/, '.html')
+
+    pageData.frontmatter.head ??= []
+    pageData.frontmatter.head.push([
+      'link',
+      { rel: 'canonical', href: canonicalUrl }
+    ])
+
+    return {
+      frontmatter: {
+        ...pageData.frontmatter,
+        head: [['script', { type: 'application/ld+json' }, getJSONLD(pageData)]]
+      }
+    }
   }
 })
+
+//
+
+function getJSONLD(pageData: PageData) {
+  let JSONLD = ''
+  if (pageData.relativePath === 'index.md') {
+    JSONLD = `{
+  "@context":"http://schema.org",
+  "@type":"WebSite",
+  "url":"https:\/\/mozg.com.br\/",
+  "inLanguage":"pt",
+  "description":"${pageData.description}",
+  "name":"${pageData.title}"
+}`
+  } else {
+    let lang = pageData.relativePath.startsWith('zh/') ? 'zh-CN' : 'en'
+    let url = `https:\/\/mozg.com.br\/${pageData.relativePath
+      .replace(/\.md$/, '')
+      .replace(/\/index\$/, '/')}`
+    JSONLD = `{
+  "@context":"http://schema.org",
+  "@type":"TechArticle",
+  "headline":"${pageData.title} | ${pageData.titleTemplate}",
+  "inLanguage":"${lang}",
+  "mainEntityOfPage":{
+     "@type":"WebPage",
+     "@id":"${url}"
+  },
+  "keywords":"mozg, cerebrum",
+  "url":"${url}"
+}`
+  }
+
+  // console.log({ pageData, JSONLD })
+
+  return `${JSONLD}`
+}

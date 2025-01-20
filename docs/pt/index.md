@@ -59,6 +59,8 @@ hero:
 }
 </style>
 
+main
+
 <mozg-pwa></mozg-pwa>
 
 <!-- mozg-web-components -->

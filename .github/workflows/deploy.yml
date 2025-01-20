@@ -30,7 +30,7 @@ jobs:
 
       # Copiar o arquivo CNAME para o diretório dist
       - name: Copy CNAME file
-        run: cp CNAME dist/
+        run: cp CNAME docs/.vitepress/dist/
 
       # Deploy para o GitHub Pages
       - name: Deploy to GitHub Pages

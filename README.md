@@ -13,6 +13,10 @@ VitePress is a Vue-powered static site generator and a spiritual successor to [V
 
 To check out docs, visit [vitepress.dev](https://vitepress.dev).
 
+```bash
+npm create vitepress@latest -- --help
+```
+
 ## Changelog
 
 Detailed changes for each release are documented in the [CHANGELOG](https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md).
@@ -29,32 +33,14 @@ Copyright (c) 2019-present, Yuxi (Evan) You
 
 ## Development
 
-https://dnschecker.org/
-
-https://search.google.com/search-console/index/drilldown?resource_id=sc-domain%3Amozg.com.br&item_key=CAMYCyAC&hl=pt
+https://mozgbrasil.github.io//vitepress-mozg/
 
 ```bash
+git clone https://github.com/mozgbrasil/vitepress-mozg
 
-
-# Mount $ Remount
-
-MY_DATE_TIME=$(date +"%Y%m%d_%H%M%S")
-IN="/home/marcio/Downloads/tmp/$MY_DATE_TIME"
-mkdir -p "$IN"
-cd "$IN"
-
-# npm add -D vitepress
-# npx vitepress init
-
-npm create vitepress@latest -- --help
-
-# Dev
-
-cd vitepress-project
+cd vitepress-mozg
 npm install
-pnpm install
 npm run dev
-
 ```
 
 ## Publish
@@ -77,7 +63,7 @@ echo "mozg.com.br" >> CNAME
 
 ```
 
-<!-- https://mozgbrasil.github.io//vitepress/ -->
+<!--  -->
 
 ## Tests
 

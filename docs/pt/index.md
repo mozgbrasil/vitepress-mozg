@@ -59,15 +59,19 @@ hero:
 }
 </style>
 
-main
+<style>
+/*  Fix: "flash of unstyled content" (FOUC). */
+[class^="mozg-"] {
+  visibility: hidden;
+}
+
+[class^="mozg-"]:defined {
+  visibility: visible;
+}
+</style>
 
 <mozg-pwa></mozg-pwa>
-
-<!-- mozg-web-components -->
-
-<!-- <mozg-dock-gal></mozg-dock-gal> -->
-
-<!-- <mozg-web-gl-mouse-controlled-snow></mozg-web-gl-mouse-controlled-snow> -->
+<mozg-core></mozg-core>
 
 <style>
   meu-componente-vanilla {
@@ -95,22 +99,12 @@ main
   }
 </style>
 
-<meu-componente-vanilla titulo="Bem-vindo!" nome="vanilla">
-  <p>vanilla slot content</p>
-</meu-componente-vanilla>
+<mozg-meu-componente-vanilla nome="vanilla"> </mozg-meu-componente-vanilla>
+<mozg-meu-componente-lit nome="lit"> </mozg-meu-componente-lit>
+<mozg-meu-componente-svelte nome="svelte"> </mozg-meu-componente-svelte>
+<mozg-meu-componente-react nome="react"> </mozg-meu-componente-react>
+<meu-componente-vue nome="vue"> </meu-componente-vue>
 
-<meu-componente-lit titulo="Bem-vindo!" nome="lit">
-  <p>lit slot content</p>
-</meu-componente-lit>
-
-<meu-componente-svelte titulo="Saudações!" nome="svelte">
-  <p>svelte slot content</p>
-</meu-componente-svelte>
-
-<meu-componente-react titulo="Bem-vindo!" nome="react">
-  <p>react slot content</p>
-</meu-componente-react>
-
-<meu-componente-vue titulo="Bem-vindo ao Vue!" nome="vue">
-  <p>vue slot content</p>
-</meu-componente-vue>
+<!-- <script>
+  console.log(this);
+</script> -->

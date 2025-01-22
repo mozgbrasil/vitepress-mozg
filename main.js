@@ -47,4 +47,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 console.log({ readyState: document.readyState })
 if (document.readyState === 'complete') {
+  appendPwa()
 }

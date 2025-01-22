@@ -81,7 +81,7 @@ export const shared = defineConfig({
     ['link', { rel: 'manifest',  href: '/manifest.json' }],
     ['script', { type: 'module',  src: '/main.js', defer: 'true' }],
     ['link', { rel: 'stylesheet',  href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' }],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.21' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.22' }],
     ['script', { src: 'https://platform.linkedin.com/badges/js/profile.js' }],
     // ['script', { type: 'module', src: 'http://localhost:5173/src/index.ts' }],
     // ['script', { type: 'module', src: 'mozg-web-components.es.js' }],
@@ -94,14 +94,21 @@ export const shared = defineConfig({
       
         // Registrar o Service Worker
         if ("serviceWorker" in navigator) {
-          navigator.serviceWorker
-            .register("/service-worker.js")
-            .then((registration) => {
-              console.log("Service Worker registrado com sucesso:", registration);
-            })
-            .catch((error) => {
-              console.error("Falha ao registrar o Service Worker:", error);
-            });
+          navigator.serviceWorker.getRegistrations().then((registrations) => {
+            if (registrations.length === 0) {
+              // Se não houver registros, registre o Service Worker
+              navigator.serviceWorker
+                .register("/service-worker.js")
+                .then((registration) => {
+                  console.log("Service Worker registrado com sucesso:");
+                })
+                .catch((error) => {
+                  console.error("Falha ao registrar o Service Worker:", error);
+                });
+            } else {
+              console.log("Service Worker já registrado");
+            }
+          });
         }
 
       })()`

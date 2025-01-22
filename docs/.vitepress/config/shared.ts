@@ -82,7 +82,7 @@ export const shared = defineConfig({
     ['script', { type: 'module',  src: '/main.js', defer: 'true' }],
     ['link', { rel: 'stylesheet',  href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' }],
     ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.22' }],
-    ['script', { src: 'https://platform.linkedin.com/badges/js/profile.js' }],
+    ['script', { src: 'https://platform.linkedin.com/badges/js/profile.js', async: '', defer: '' }],
     // ['script', { type: 'module', src: 'http://localhost:5173/src/index.ts' }],
     // ['script', { type: 'module', src: 'mozg-web-components.es.js' }],
     // 
@@ -116,7 +116,7 @@ export const shared = defineConfig({
     // https://vitepress.dev/reference/site-config#example-using-google-analytics
     [
       'script',
-      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=UA-73869264-1' }
+      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-XX3W2330B2' }
     ],
     [
       'script',
@@ -124,7 +124,7 @@ export const shared = defineConfig({
       `window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'UA-73869264-1');`
+      gtag('config', 'G-XX3W2330B2');`
     ],
     // 
   ],

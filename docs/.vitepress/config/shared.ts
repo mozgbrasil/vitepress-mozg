@@ -116,7 +116,7 @@ export const shared = defineConfig({
     // https://vitepress.dev/reference/site-config#example-using-google-analytics
     [
       'script',
-      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-XX3W2330B2' }
+      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-WCNGF2YB71' }
     ],
     [
       'script',
@@ -124,7 +124,7 @@ export const shared = defineConfig({
       `window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-XX3W2330B2');`
+      gtag('config', 'G-WCNGF2YB71');`
     ],
     // 
   ],

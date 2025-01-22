@@ -1,3 +1,7 @@
+https://mozg.com.br/
+https://mozgbrasil.github.io/vitepress-mozg
+https://mozg-project.web.app/
+
 # VitePress 📝💨
 
 [![test](https://github.com/vuejs/vitepress/workflows/Test/badge.svg)](https://github.com/vuejs/vitepress/actions)
@@ -51,7 +55,7 @@ npm run build && npm run serve
 
 # meld /home/marcio/dados/vitepress/docs/.vitepress/dist /home/marcio/dados/mozgbrasil.github.io/docs
 
-rm -fr ./docs/.vitepress/cache/ ./docs/.vitepress/dist/
+rm -fr  dist ./docs/.vitepress/cache/ ./docs/.vitepress/dist/
 
 npm run build
 

@@ -3,6 +3,7 @@ import { defineConfig, type DefaultTheme } from 'vitepress'
 
 const require = createRequire(import.meta.url)
 // const pkg = require('vitepress/package.json')
+
 const pkg = { version: '1.0.0' }
 
 export const pt = defineConfig({

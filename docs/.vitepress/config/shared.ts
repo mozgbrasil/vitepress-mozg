@@ -68,8 +68,8 @@ export const shared = defineConfig({
 
   /* prettier-ignore */
   head: [     
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: 'logo-mini.svg' }],
-    ['link', { rel: 'icon', type: 'image/png', href: 'logo-mini.png' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo-mini.svg' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/logo-mini.png' }],
     ['meta', { name: 'theme-color', content: '#5f67ee' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:locale', content: 'pt_BR' }],
@@ -78,34 +78,34 @@ export const shared = defineConfig({
     ['meta', { property: 'og:image', content: 'https://mozg.com.br/og.jpg' }],
     ['meta', { property: 'og:url', content: 'https://mozg.com.br/' }],
     // ['script', { src: 'https://cdn.usefathom.com/script.js', 'data-site': 'AZBRSFGG', 'data-spa': 'auto', defer: '' }],
-    ['link', { rel: 'manifest',  href: 'manifest.json' }],
-    ['script', { type: 'module',  src: 'main.js', defer: 'true' }],
+    ['link', { rel: 'manifest',  href: '/manifest.json' }],
+    ['script', { type: 'module',  src: '/main.js', defer: 'true' }],
     ['link', { rel: 'stylesheet',  href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' }],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.20' }],
-    // ['script', { src: 'https://platform.linkedin.com/badges/js/profile.js' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.21' }],
+    ['script', { src: 'https://platform.linkedin.com/badges/js/profile.js' }],
     // ['script', { type: 'module', src: 'http://localhost:5173/src/index.ts' }],
     // ['script', { type: 'module', src: 'mozg-web-components.es.js' }],
     // 
     // https://vitepress.dev/reference/site-config#example-registering-a-service-worker
-    // [
-    //   'script',
-    //   { id: 'register-sw' },
-    //   `;(() => {
+    [
+      'script',
+      { id: 'register-sw' },
+      `;(() => {
       
-    //     // Registrar o Service Worker
-    //     if ("serviceWorker" in navigator) {
-    //       navigator.serviceWorker
-    //         .register("service-worker.js")
-    //         .then((registration) => {
-    //           console.log("Service Worker registrado com sucesso:", registration);
-    //         })
-    //         .catch((error) => {
-    //           console.error("Falha ao registrar o Service Worker:", error);
-    //         });
-    //     }
+        // Registrar o Service Worker
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then((registration) => {
+              console.log("Service Worker registrado com sucesso:", registration);
+            })
+            .catch((error) => {
+              console.error("Falha ao registrar o Service Worker:", error);
+            });
+        }
 
-    //   })()`
-    // ] ,
+      })()`
+    ] ,
     // https://vitepress.dev/reference/site-config#example-using-google-analytics
     [
       'script',

@@ -1,33 +1,10 @@
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js'
+// @ts-nocheck
 
 export class Program {
   constructor() {}
 
   execute() {
-    this.firebase()
     this.appendPwa()
-  }
-
-  firebase() {
-    // Import the functions you need from the SDKs you need
-    // import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js'
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: 'AIzaSyCb3ENfGt4PxC1NALpSTm1Ht97s3X9P3_g',
-      authDomain: 'mozg-project.firebaseapp.com',
-      projectId: 'mozg-project',
-      storageBucket: 'mozg-project.firebasestorage.app',
-      messagingSenderId: '279842876766',
-      appId: '1:279842876766:web:7c1641877aff36788433cf'
-    }
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig)
-
-    console.log({ app })
   }
 
   appendPwa() {

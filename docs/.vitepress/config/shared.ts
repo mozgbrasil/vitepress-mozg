@@ -78,12 +78,12 @@ export const shared = defineConfig({
     ['meta', { property: 'og:image', content: 'https://mozg.com.br/og.jpg' }],
     ['meta', { property: 'og:url', content: 'https://mozg.com.br/' }],
     // ['script', { src: 'https://cdn.usefathom.com/script.js', 'data-site': 'AZBRSFGG', 'data-spa': 'auto', defer: '' }],
-    ['link', { rel: 'manifest',  href: '/manifest.json' }],
-    ['script', { type: 'module',  src: '/main.ts', defer: '' }],
+    ['link', { rel: 'manifest',  href: '/manifest.json' }], 
+    ['script', { type: 'module',  src: '/main.js', defer: '' }],
     ['link', { rel: 'stylesheet',  href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' }],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.23' }],
+    // ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.23' }],
     ['script', { src: 'https://platform.linkedin.com/badges/js/profile.js', async: '', defer: '' }],
-    // ['script', { type: 'module', src: 'http://localhost:5173/src/index.ts' }],
+    ['script', { type: 'module', src: 'http://localhost:5173/src/index.ts' }],
     // ['script', { type: 'module', src: 'mozg-web-components.es.js' }],
     // 
     // 
@@ -91,7 +91,9 @@ export const shared = defineConfig({
       'script',
       { type: 'module' },
       `;(() => {
+
       
+
        
 
       })()`

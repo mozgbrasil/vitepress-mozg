@@ -10,7 +10,8 @@
     "resolveJsonModule": true,
     "verbatimModuleSyntax": true,
     "jsx": "preserve",
-    "lib": ["esnext", "dom", "dom.iterable"]
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "types": ["vitepress/client"]
   },
   "exclude": [
     "**/node_modules/**",
@@ -18,6 +19,7 @@
     "template",
     "bin",
     "docs/snippets",
-    "scripts"
+    "scripts",
+    "functions"
   ]
 }

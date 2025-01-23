@@ -1,6 +1,6 @@
-https://mozg.com.br/
-https://mozgbrasil.github.io/vitepress-mozg
-https://mozg-project.web.app/
+<https://mozg.com.br/>
+<https://mozgbrasil.github.io/vitepress-mozg>
+<https://mozg-project.web.app/>
 
 # VitePress 📝💨
 
@@ -37,8 +37,6 @@ Copyright (c) 2019-present, Yuxi (Evan) You
 
 ## Development
 
-https://mozgbrasil.github.io//vitepress-mozg/
-
 ```bash
 git clone https://github.com/mozgbrasil/vitepress-mozg
 
@@ -51,19 +49,13 @@ npm run dev
 
 ```bash
 
-npm run build && npm run serve
-
 # meld /home/marcio/dados/vitepress/docs/.vitepress/dist /home/marcio/dados/mozgbrasil.github.io/docs
 
 rm -fr  dist ./docs/.vitepress/cache/ ./docs/.vitepress/dist/
 
+npm run build && npm run serve
+
 npm run build
-
-rm -fr /home/marcio/dados/mozg.com.br/docs
-
-cp -r /home/marcio/dados/vitepress/docs/.vitepress/dist /home/marcio/dados/mozg.com.br/docs
-
-echo "mozg.com.br" >> CNAME
 
 ```
 

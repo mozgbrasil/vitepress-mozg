@@ -78,12 +78,19 @@ hero:
   }
 </style>
 
+<!-- Authentication -->
+
+<mozg-firebase-tools></mozg-firebase-tools>
+
+<!-- Social Links -->
+
 <style>
   i {
     cursor: pointer;
     font-size: 4rem; /* Ajuste o tamanho do ícone conforme necessário */
     margin: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block; /* Adiciona display: inline-block */
   }
 
   i:hover {
@@ -129,6 +136,8 @@ hero:
 
   .icons-container i {
     margin-bottom: 20px;
+    flex-basis: calc(25% - 20px); /* Ajusta o tamanho base dos ícones */
+    flex-grow: 1; /* Permite que os ícones cresçam para preencher o espaço disponível */
   }
 </style>
 

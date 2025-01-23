@@ -10,6 +10,7 @@ export class Program {
   appendPwa() {
     // Seleciona o contêiner destino
     const target = document.querySelector('#local-search')
+    // const target = document.querySelector('.VPNavBarMenu')
 
     if (target instanceof HTMLElement) {
       target.style.display = 'contents'
@@ -19,26 +20,14 @@ export class Program {
 
     // console.log({ target })
 
-    // Verifica se o contêiner existe antes de tentar criar o elemento
-    if (target) {
-      // Cria o elemento <mozg-pwa>
-      const el = document.createElement('mozg-pwa')
-      // const el = document.querySelector('mozg-pwa')
+    let el = ''
 
-      // console.log({ el })
+    el = document.createElement('mozg-pwa')
+    el.setAttribute('data-atributo', 'valor')
+    target.appendChild(el)
 
-      // Adiciona propriedades ou atributos, se necessário (opcional)
-      el.setAttribute('data-atributo', 'valor')
-
-      // Insere o elemento <mozg-pwa> dentro do <div id="local-search">
-      target.appendChild(el)
-
-      // console.log('<mozg-pwa> foi criado e adicionado ao #local-search')
-    } else {
-      console.error(
-        'Não foi possível encontrar o contêiner #local-search no DOM.'
-      )
-    }
+    // el = document.createElement('mozg-google-sign-in')
+    // target.appendChild(el)
   }
 }
 

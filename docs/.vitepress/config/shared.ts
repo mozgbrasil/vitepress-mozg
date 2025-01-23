@@ -81,9 +81,9 @@ export const shared = defineConfig({
     ['link', { rel: 'manifest',  href: '/manifest.json' }], 
     ['script', { type: 'module',  src: '/main.js', defer: '' }],
     ['link', { rel: 'stylesheet',  href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' }],
-    // ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.23' }],
-    ['script', { src: 'https://platform.linkedin.com/badges/js/profile.js', async: '', defer: '' }],
-    ['script', { type: 'module', src: 'http://localhost:5173/src/index.ts' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@latest' }],
+    ['script', { src: 'https://platform.linkedin.com/badges/js/profile.js', defer: '' }],
+    // ['script', { type: 'module', src: 'http://localhost:5173/src/index.ts' }],
     // ['script', { type: 'module', src: 'mozg-web-components.es.js' }],
     // 
     // 

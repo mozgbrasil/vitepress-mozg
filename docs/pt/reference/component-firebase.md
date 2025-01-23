@@ -1,6 +1,6 @@
 ---
 title: Mozg
-titleTemplate: Binance Charts
+titleTemplate: Firebase
 description: Sistemas e informação
 ---
 
@@ -8,9 +8,9 @@ description: Sistemas e informação
 
 ![valid XHTML][checkmark]
 
-# Binance Charts
+# Firebase
 
-O componente Binance Charts foi construido para automatizar analises de dados de Binance, permitindo visualizações de gráficos e análises de dados em tempo real.
+<!-- [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) -->
 
 <!-- ::: tip
 🍀
@@ -32,16 +32,16 @@ $ npm i @mozgbrasil/web-components
 
 ### CDN
 
-```js
+```html
 <script src="https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components"></script>
 ```
 
 ### Elemento HTML
 
 ```html
-<mozg-binance-charts></mozg-binance-charts>
+<mozg-firebase-tools></mozg-firebase-tools>
 ```
 
 ## **Veja o resultado**
 
-<mozg-binance-charts></mozg-binance-charts>
+<mozg-firebase-tools></mozg-firebase-tools>

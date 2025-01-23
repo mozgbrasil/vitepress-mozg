@@ -89,8 +89,8 @@ function sidebarReference(): DefaultTheme.SidebarItem[] {
           text: 'Componentes',
           base: '/reference/component-',
           items: [
-            { text: 'Simple Css Waves', link: 'simple-css-waves' },
-            { text: 'Binance Charts', link: 'binance-charts' }
+            { text: 'Firebase', link: 'firebase' },
+            { text: 'Binance', link: 'binance' }
           ]
         },
         { text: 'Mobile Apps', link: 'mobile-apps' },

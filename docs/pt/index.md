@@ -67,6 +67,8 @@ hero:
   }
 </style>
 
+<!-- mozg -->
+
 <style>
   /*  Fix: "flash of unstyled content" (FOUC). */
   [class^='mozg-'] {
@@ -78,9 +80,7 @@ hero:
   }
 </style>
 
-<!-- Authentication -->
-
-<mozg-firebase-tools></mozg-firebase-tools>
+<!-- mozg-components -->
 
 <!-- Social Links -->
 
@@ -142,6 +142,7 @@ hero:
 </style>
 
 <div class="icons-container">
+ 
   <!-- https://fontawesome.com/icons -->
   <a href="https://wa.me/5511977072339?text=%7B%22nome%22%3A%20%22Jo%C3%A3o%22%2C%20%22mensagem%22%3A%20%22Gostaria%20de%20saber%20mais%20sobre%20os%20seus%20servi%C3%A7os.%22%7D" target="_blank">
     <i class="fa-brands fa-whatsapp fa-2xl"></i>
@@ -177,3 +178,24 @@ hero:
      <i class="fa-solid fa-sitemap fa-2xl"></i>
   </a>
 </div>
+
+<!-- Social Links -->
+
+<style>
+  
+
+  mozg-google-sign-in {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+ 
+</style>
+
+<mozg-google-sign-in></mozg-google-sign-in>

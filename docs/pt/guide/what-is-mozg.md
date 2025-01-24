@@ -38,27 +38,9 @@ Se trata de um projeto criado em Fevereiro de 2016 por <a href="https://mozg.com
   }
 </style>
 
-<script setup>
-import { VPTeamMembers } from 'vitepress/theme'
-
-const members = [
-  {
-    avatar: 'https://www.github.com/mozgbrasil.png',
-    name: 'Marcio',
-    title: '@mozgbrasil',
-    links: [
-      { icon: 'github', link: 'https://github.com/mozgbrasil' },
-      { icon: 'twitter', link: 'https://twitter.com/mozgbrasil' },
-       { icon: 'linkedin', link: 'https://br.linkedin.com/in/mozgbrasil?trk=profile-badge' },
-    ]
-  },
- 
-]
-</script>
-
 <div class="container-grid">
   <div class="item-grid">
-    <VPTeamMembers size="small" :members="members" />
+  xx
   </div>
   <div class="item-grid">
     <div

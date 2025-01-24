@@ -80,6 +80,14 @@ export const shared = defineConfig({
     // ['script', { src: 'https://cdn.usefathom.com/script.js', 'data-site': 'AZBRSFGG', 'data-spa': 'auto', defer: '' }],
     ['link', { rel: 'manifest',  href: '/manifest.json' }], 
     ['script', { type: 'module',  src: '/main.js', defer: '' }],
+    [
+      'script',
+      {
+        async: 'true',
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7927094983433027',
+        crossorigin: 'anonymous'
+      }
+    ],
     ['link', { rel: 'stylesheet',  href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' }],
     ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.25' }],
     ['script', { src: 'https://platform.linkedin.com/badges/js/profile.js', defer: '' }],

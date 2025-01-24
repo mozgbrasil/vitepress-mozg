@@ -199,3 +199,11 @@ hero:
 </style>
 
 <mozg-google-sign-in></mozg-google-sign-in>
+
+<script setup>
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  console.log(window);
+});
+</script>

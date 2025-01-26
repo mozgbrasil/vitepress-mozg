@@ -6,74 +6,37 @@ description: Meu nome é Marcio, venho desenvolvendo software desde 1999, estou 
 
 # O que é Mozg?
 
-Se trata de um projeto criado em Fevereiro de 2016 por <a href="https://mozg.com.br/jekyll/curriculum.pdf">Marcio dos Santos Amorim</a>
+Mozg é um projeto criado em fevereiro de 2016 por [Marcio dos Santos Amorim](#sobre-marcio-dos-santos-amorim), que funciona como um laboratório para o desenvolvimento de softwares inovadores e eficientes. Seu objetivo é experimentar novas tecnologias, explorar soluções criativas e entregar ferramentas que agreguem valor aos usuários.
 
-<style>
-  .container-grid {
-    /* background-color:red; */
-    display: grid; /* Define o container como um grid */
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(150px, 1fr)
-    ); /* Configura colunas responsivas */
-    gap: 16px; /* Espaçamento entre os elementos */
-    padding: 16px; /* Espaçamento interno do container */
-  }  
+## Sobre Marcio dos Santos Amorim
 
-  .item-grid {
-    background-color: #f0f0f0; /* Cor de fundo dos itens */
-    border: 1px solid #ddd; /* Borda opcional */
-    padding: 16px; /* Espaçamento interno dos itens */
-    border-radius: 8px; /* Bordas arredondadas */
-    display: flex; /* Define Flexbox no item */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    text-align: center; /* Alinhamento do texto */
-  }
+Meu nome é Marcio dos Santos Amorim. Sou desenvolvedor de software desde 1999 e tenho uma paixão por criar soluções que promovam automação, lucratividade e inovação. Ao longo da minha carreira, busco me manter atualizado com as melhores práticas da indústria para oferecer serviços de alta qualidade e resultados que realmente façam a diferença.
 
-  .item-grid iframe {
-    max-width: 100%; /* Limita a largura do iframe para não ultrapassar o contêiner */
-    /* height: auto; Ajusta a altura proporcionalmente */
-    /* display: block; Remove qualquer espaçamento extra ao redor do iframe */
-  }
-</style>
-
-<div class="container-grid">
-  <div class="item-grid">
-  xx
-  </div>
-  <div class="item-grid">
-    <div
-      class="badge-base LI-profile-badge"
-      data-locale="pt_BR"
-      data-size="medium"
-      data-theme="light"
-      data-type="VERTICAL"
-      data-vanity="mozgbrasil"
-      data-version="v1"
-    >
-     &nbsp;
-    </div>
-  </div>
-</div>
+<div
+  class="badge-base LI-profile-badge"
+  data-locale="pt_BR"
+  data-size="medium"
+  data-theme="light"
+  data-type="VERTICAL"
+  data-vanity="mozgbrasil"
+  data-version="v1"
+></div>
 
 <script setup>
-import { onMounted } from 'vue';
+  import { onMounted } from 'vue'
 
-onMounted(() => {
-  
-// Função para carregar o script do LinkedIn
-function loadLinkedInBadge() {
-  const script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src = 'https://platform.linkedin.com/badges/js/profile.js';
-  script.async = true;
-  script.defer = true;
-  document.head.appendChild(script); // Adiciona o script ao <head>
-}
+  onMounted(() => {
+    // Função para carregar o script do LinkedIn
+    function loadLinkedInBadge() {
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://platform.linkedin.com/badges/js/profile.js';
+      script.async = true;
+      script.defer = true;
+      document.head.appendChild(script); // Adiciona o script ao <head>
+    }
 
-// Chama a função para carregar o script
-loadLinkedInBadge();
-
-});
+    // Chama a função para carregar o script
+    loadLinkedInBadge()
+  })
 </script>

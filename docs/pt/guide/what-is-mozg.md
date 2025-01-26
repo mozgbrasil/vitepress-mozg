@@ -21,22 +21,3 @@ Meu nome é Marcio dos Santos Amorim. Sou desenvolvedor de software desde 1999 e
   data-vanity="mozgbrasil"
   data-version="v1"
 ></div>
-
-<script setup>
-  import { onMounted } from 'vue'
-
-  onMounted(() => {
-    // Função para carregar o script do LinkedIn
-    function loadLinkedInBadge() {
-      const script = document.createElement('script');
-      script.type = 'text/javascript';
-      script.src = 'https://platform.linkedin.com/badges/js/profile.js';
-      script.async = true;
-      script.defer = true;
-      document.head.appendChild(script); // Adiciona o script ao <head>
-    }
-
-    // Chama a função para carregar o script
-    loadLinkedInBadge()
-  })
-</script>

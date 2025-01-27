@@ -1,5 +1,4 @@
 import { defineConfig, PageData } from 'vitepress'
-
 import {
   groupIconMdPlugin,
   groupIconVitePlugin,
@@ -88,10 +87,10 @@ export const shared = defineConfig({
         crossorigin: 'anonymous'
       }
     ],
-    ['link', { rel: 'stylesheet',  href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' }],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.25' }],
-    ['script', { src: 'https://platform.linkedin.com/badges/js/profile.js', async: 'true', defer: 'true' }],
-    // ['script', { type: 'module', src: 'http://localhost:5173/src/index.ts' }],
+     ['link', { rel: 'stylesheet', href: '/tailwind.css?inline' }],
+    ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' }],
+    // ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.25' }],
+    ['script', { type: 'module', src: 'http://localhost:5173/src/index.ts' }],
     // ['script', { type: 'module', src: 'mozg-web-components.es.js' }],
     //  
     // 

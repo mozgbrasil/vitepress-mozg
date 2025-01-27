@@ -12,18 +12,15 @@ export const pt = defineConfig({
 
   themeConfig: {
     nav: nav(),
-
     sidebar: {
       '/guide/': { base: '/guide/', items: sidebarGuide() },
       '/reference/': { base: '/reference/', items: sidebarReference() }
     },
-
     editLink: {
       pattern:
         'https://github.com/mozgbrasil/vitepress-mozg/edit/main/docs/:path',
       text: 'Edite esta página no GitHub'
     },
-
     footer: {
       message: 'Lançado sob a licença MIT.',
       copyright: 'Copyright © 2016-present 🍀'

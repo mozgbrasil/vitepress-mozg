@@ -10,7 +10,9 @@ Mozg é um projeto criado em fevereiro de 2016 por [Marcio dos Santos Amorim](#s
 
 ## Sobre Marcio dos Santos Amorim
 
-Meu nome é Marcio dos Santos Amorim. Sou desenvolvedor de software desde 1999 e tenho uma paixão por criar soluções que promovam automação, lucratividade e inovação. Ao longo da minha carreira, busco me manter atualizado com as melhores práticas da indústria para oferecer serviços de alta qualidade e resultados que realmente façam a diferença.
+Meu nome é Marcio dos Santos Amorim. Sou desenvolvedor de software desde 1999 e tenho uma paixão por criar soluções que promovam automação, lucratividade e inovação. Ao longo da minha carreira, busco me manter atualizado com as melhores práticas da indústria para oferecer serviços de alta qualidade e resultados que façam a diferença.
+
+<mozg-linkedin-badges> </mozg-linkedin-badges>
 
 <div
   class="badge-base LI-profile-badge"
@@ -20,4 +22,42 @@ Meu nome é Marcio dos Santos Amorim. Sou desenvolvedor de software desde 1999 e
   data-type="VERTICAL"
   data-vanity="mozgbrasil"
   data-version="v1"
-></div>
+>  
+</div>
+
+<script>
+// Função para verificar se o iframe está carregado
+function checkIframeLoaded() {
+    const iframeContainer = document.querySelector('.badge-base.LI-profile-badge iframe');
+    if (iframeContainer) {
+        try {
+            // Tenta acessar o conteúdo do iframe
+            const iframeContent = iframeContainer.contentWindow || iframeContainer.contentDocument.document || iframeContainer.contentDocument;
+            if (iframeContent.document) {
+                // Se o documento do iframe estiver disponível, ele está carregado
+                iframeContainer.width = '100%';
+                iframeContainer.style.border = 'none';
+
+                // Injeta o estilo CSS no iframe para remover a largura do .profile-badge--width-250
+                const style = iframeContent.document.createElement('style');
+                style.innerHTML = `
+                    .profile-badge--width-250 {
+                        width: auto !important;
+                    }
+                `;
+                iframeContent.document.head.appendChild(style);
+
+
+                console.log('Iframe carregado e estilos aplicados.');
+                clearInterval(intervalId); // Para o intervalo quando o iframe estiver carregado
+            }
+        } catch (e) {
+            // Se ocorrer um erro, o iframe ainda não está carregado
+            console.log('Iframe ainda não carregado.');
+        }
+    }
+}
+
+// Define um intervalo para verificar o carregamento do iframe a cada 1 segundo
+const intervalId = setInterval(checkIframeLoaded, 1000);
+</script>

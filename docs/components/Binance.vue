@@ -51,14 +51,7 @@ const insertBinanceElement = () => {
       // Acessar o Shadow Root
       const shadowRoot = shadowHost.shadowRoot
 
-      //
-
       if (shadowRoot) {
-        const cryptoTable = shadowRoot.querySelector('.crypto-table')
-        if (cryptoTable) {
-          cryptoTable.style.display = 'none'
-        }
-
         // Selecionar um elemento dentro do Shadow DOM
         const elementoDentroDoShadowDOM =
           shadowRoot.getElementById('autoIterateToggle')
@@ -68,6 +61,12 @@ const insertBinanceElement = () => {
 
         // Fazer algo com o elemento selecionado
         console.log({ shadowHost, shadowRoot, elementoDentroDoShadowDOM })
+
+        //
+        const cryptoTable = shadowRoot.querySelector('.crypto-table')
+        if (cryptoTable) {
+          // cryptoTable.style.display = 'none'
+        }
       }
     }, 1000)
   }

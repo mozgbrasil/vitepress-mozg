@@ -87,12 +87,19 @@ export const shared = defineConfig({
         crossorigin: 'anonymous'
       }
     ],
-     ['link', { rel: 'stylesheet', href: '/tailwind.css?inline' }],
+    // ['link', { rel: 'stylesheet', href: '/tailwind.css?inline' }],
     ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' }],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.27' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.28' }],
     // ['script', { type: 'module', src: 'http://localhost:5173/src/index.ts' }],
     // ['script', { type: 'module', src: 'mozg-web-components.es.js' }],
-    //  
+
+    // ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' }],
+    // ['script', { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js' }],
+ 
+    // ['script', { type: 'module', src: 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js' }],
+    // ['script', { type: 'nomodule',src: 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js' }],
+    // ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css' }],
+
     // 
      [
       'script',
@@ -133,23 +140,23 @@ export const shared = defineConfig({
       { id: 'register-sw' },
       `;(() => {      
         // Registrar o Service Worker
-        if ("serviceWorker" in navigator) {
-          navigator.serviceWorker.getRegistrations().then((registrations) => {
-            if (registrations.length === 0) {
-              // Se não houver registros, registre o Service Worker
-              navigator.serviceWorker
-                .register("/service-worker.js")
-                .then((registration) => {
-                  console.log("Service Worker registrado com sucesso:");
-                })
-                .catch((error) => {
-                  console.error("Falha ao registrar o Service Worker:", error);
-                });
-            } else {
-              console.log("Service Worker já registrado");
-            }
-          });
-        }
+        // if ("serviceWorker" in navigator) {
+        //   navigator.serviceWorker.getRegistrations().then((registrations) => {
+        //     if (registrations.length === 0) {
+        //       // Se não houver registros, registre o Service Worker
+        //       navigator.serviceWorker
+        //         .register("/service-worker.js")
+        //         .then((registration) => {
+        //           console.log("Service Worker registrado com sucesso:");
+        //         })
+        //         .catch((error) => {
+        //           console.error("Falha ao registrar o Service Worker:", error);
+        //         });
+        //     } else {
+        //       console.log("Service Worker já registrado");
+        //     }
+        //   });
+        // }
       })()`
     ] ,
     // 

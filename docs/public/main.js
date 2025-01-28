@@ -12,6 +12,8 @@ export class Program {
     const target = document.querySelector('#local-search')
     // const target = document.querySelector('.VPNavBarMenu')
 
+    console.log({ target })
+
     if (target instanceof HTMLElement) {
       target.style.display = 'contents'
     } else {

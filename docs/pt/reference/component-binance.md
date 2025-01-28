@@ -12,10 +12,6 @@ description: Sistemas e informação
 
 O componente Binance foi construido para automatizar analises de dados de Binance, permitindo visualizações de gráficos e análises de dados em tempo real.
 
-<!-- ::: tip
-🍀
-::: -->
-
 ## **Como usar?**
 
 Importe via [NPM](https://www.npmjs.com/package/@mozgbrasil/web-components) ou [CDN](https://en.wikipedia.org/wiki/JSDelivr) e utilize o elemento [HTML](https://pt.wikipedia.org/wiki/HTML)
@@ -33,7 +29,7 @@ $ npm i @mozgbrasil/web-components
 ### CDN
 
 ```js
-<script src="https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components"></script>
+<script src='https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components'></script>
 ```
 
 ### Elemento HTML
@@ -44,4 +40,15 @@ $ npm i @mozgbrasil/web-components
 
 ## **Veja o resultado**
 
-<mozg-binance></mozg-binance>
+<Binance />
+
+<script setup>
+import Binance from '../../components/Binance.vue';
+</script>
+
+<style>
+ body {
+    position: absolute;
+    overflow: auto;
+ }
+</style>

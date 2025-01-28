@@ -79,30 +79,17 @@ export const shared = defineConfig({
     // ['script', { src: 'https://cdn.usefathom.com/script.js', 'data-site': 'AZBRSFGG', 'data-spa': 'auto', defer: '' }],
     ['link', { rel: 'manifest',  href: '/manifest.json' }], 
     ['script', { type: 'module',  src: '/main.js', defer: '' }],
-    [
-      'script',
-      {
-        async: 'true',
-        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7927094983433027',
-        crossorigin: 'anonymous'
-      }
-    ],
     ['link', { rel: 'stylesheet', href: '/tailwind.css?inline' }],
     ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' }],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.30' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.31' }],
     // ['script', { type: 'module', src: 'http://localhost:5173/src/index.ts' }],
     // ['script', { type: 'module', src: 'mozg-web-components.es.js' }],
- 
-
-    // 
      [
       'script',
       { type: 'module' },
       `;(() => {
-
       })()`
     ] ,
-    //    
     // https://analytics.google.com/analytics/web/#/a73869264p474402691/admin/streams/table/10179988960
     [
       'script',
@@ -111,10 +98,14 @@ export const shared = defineConfig({
     [
       'script',
       {},
-      `window.dataLayer = window.dataLayer || [];
+      `
+      window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-WCNGF2YB71');`
+      gtag('config', 'G-WCNGF2YB71', {
+        'cookie_flags': 'SameSite=None;Secure'  // Garantindo o atributo correto para cookies
+      });
+      `
     ],
     // https://tagmanager.google.com/#/admin/accounts/491416460/containers/2618425/install?containerDraftId=6
     [
@@ -128,29 +119,38 @@ export const shared = defineConfig({
       })(window,document,'script','dataLayer','GTM-PNT4KQ');
       `
     ],
+    // https://www.google.com/adsense/new/u/0/pub-7927094983433027/sites/detail/url=mozg.com.br
+    [
+      'script',
+      {
+        async: 'true',
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7927094983433027',
+        crossorigin: 'anonymous'
+      }
+    ],
     // https://vitepress.dev/reference/site-config#example-registering-a-service-worker
     [
       'script',
       { id: 'register-sw' },
       `;(() => {      
         // Registrar o Service Worker
-        if ("serviceWorker" in navigator) {
-          navigator.serviceWorker.getRegistrations().then((registrations) => {
-            if (registrations.length === 0) {
-              // Se não houver registros, registre o Service Worker
-              navigator.serviceWorker
-                .register("/service-worker.js")
-                .then((registration) => {
-                  console.log("Service Worker registrado com sucesso:");
-                })
-                .catch((error) => {
-                  console.error("Falha ao registrar o Service Worker:", error);
-                });
-            } else {
-              console.log("Service Worker já registrado");
-            }
-          });
-        }
+        // if ("serviceWorker" in navigator) {
+        //   navigator.serviceWorker.getRegistrations().then((registrations) => {
+        //     if (registrations.length === 0) {
+        //       // Se não houver registros, registre o Service Worker
+        //       navigator.serviceWorker
+        //         .register("/service-worker.js")
+        //         .then((registration) => {
+        //           console.log("Service Worker registrado com sucesso:");
+        //         })
+        //         .catch((error) => {
+        //           console.error("Falha ao registrar o Service Worker:", error);
+        //         });
+        //     } else {
+        //       console.log("Service Worker já registrado");
+        //     }
+        //   });
+        // }
       })()`
     ] ,
     // 

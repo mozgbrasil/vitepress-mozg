@@ -41,11 +41,7 @@ $ npm i @mozgbrasil/web-components
 ## **Veja o resultado**
 
 <Binance />
-
-<script setup>
-import Binance from '../../components/Binance.vue';
-</script>
-
+ 
 <style>
  body {
     position: absolute;

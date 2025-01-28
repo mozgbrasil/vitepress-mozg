@@ -14,7 +14,6 @@
     </ion-header>
     <ion-content class="ion-padding">
       <div ref="modalContent"></div>
-      <!-- <mozg-binance></mozg-binance> -->
     </ion-content>
   </ion-modal>
 </template>
@@ -52,15 +51,24 @@ const insertBinanceElement = () => {
       // Acessar o Shadow Root
       const shadowRoot = shadowHost.shadowRoot
 
-      // Selecionar um elemento dentro do Shadow DOM
-      const elementoDentroDoShadowDOM =
-        shadowRoot.getElementById('autoIterateToggle')
+      //
 
-      // evento
-      elementoDentroDoShadowDOM.click()
+      if (shadowRoot) {
+        const cryptoTable = shadowRoot.querySelector('.crypto-table')
+        if (cryptoTable) {
+          cryptoTable.style.display = 'none'
+        }
 
-      // Fazer algo com o elemento selecionado
-      console.log({ shadowHost, shadowRoot, elementoDentroDoShadowDOM })
+        // Selecionar um elemento dentro do Shadow DOM
+        const elementoDentroDoShadowDOM =
+          shadowRoot.getElementById('autoIterateToggle')
+
+        // evento
+        elementoDentroDoShadowDOM.click()
+
+        // Fazer algo com o elemento selecionado
+        console.log({ shadowHost, shadowRoot, elementoDentroDoShadowDOM })
+      }
     }, 1000)
   }
 }
@@ -92,12 +100,23 @@ onMounted(() => {
 
     document.head.appendChild(script)
   })()
+  ;(() => {
+    const link = document.createElement('link')
+    link.rel = 'stylesheet'
+    link.href = 'https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css'
+
+    link.onload = () => {
+      document.body.style.position = 'absolute'
+      document.body.style.overflow = 'auto'
+    }
+    link.onerror = () => {}
+
+    document.head.appendChild(link)
+  })()
 })
 </script>
 
 <style scoped>
-@import url('https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css');
-
 ion-modal {
   --width: 100vw;
   --height: 100vh;

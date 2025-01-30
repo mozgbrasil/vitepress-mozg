@@ -68,8 +68,6 @@ hero:
 
 <!-- Mozg Resources -->
 
-<mozg-my-vitepress></mozg-my-vitepress>
-
 <style>
   mozg-google-sign-in {
     display: flex;

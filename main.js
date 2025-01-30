@@ -1,6 +1,5 @@
-// @ts-nocheck
-
-export class Program {
+console.log({ name: '🟢🟢🟢🟢 ', url: window.location.href })
+class Program {
   constructor() {}
 
   execute() {
@@ -64,8 +63,8 @@ export class Program {
       // element = document.createElement('mozg-web-gl-mouse-controlled-snow')
       // jsPath.insertBefore(element, jsPath.firstChild)
 
-      element = document.createElement('mozg-interactive-grid-effect')
-      jsPath.insertBefore(element, jsPath.firstChild)
+      // element = document.createElement('mozg-interactive-grid-effect')
+      // jsPath.insertBefore(element, jsPath.firstChild)
 
       // Verifique se o contêiner tem filhos
       // if (jsPath.firstChild) {

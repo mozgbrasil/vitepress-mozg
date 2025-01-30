@@ -213,7 +213,7 @@
           </icon>
         </div>
         <div class="profile-badge__content">
-          <img class="artdeco-entity-image artdeco-entity-image--circle-4 profile-badge__content-profile-image" alt="Marcio dos Santos Amorim" src="https://www.github.com/mozgbrasil.png">
+          <img class="artdeco-entity-image artdeco-entity-image--circle-4 profile-badge__content-profile-image" alt="Marcio dos Santos Amorim" src="/assets/17202780.jpeg">
           <h3 class="profile-badge__content-profile-name">
             <a class="profile-badge__content-profile-name-link profile-badge__content-profile-name-link--light" href="https://br.linkedin.com/in/mozgbrasil?trk=public-profile-badge-profile-badge-profile-name" data-tracking-control-name="public-profile-badge-profile-badge-profile-name" data-tracking-will-navigate>
               Marcio dos Santos Amorim

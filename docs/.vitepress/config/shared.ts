@@ -93,7 +93,7 @@ export const shared = defineConfig({
         href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css'
       }
     ],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.33' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.34' }],
     // ['script', { type: 'module', src: 'http://localhost:5173/src/index.ts' }],
     // ['script', { type: 'module', src: 'mozg-web-components.es.js' }],
     //    
@@ -101,7 +101,7 @@ export const shared = defineConfig({
       'script',
       {},
       `;(() => {
-  console.log({name:"🟢🟢🟢🟢${Date.now()}", url:window.location.href})
+  console.log({name:"🟢 head", d: ${Date.now()}, url:window.location.href})
   })()
   `
     ],
@@ -119,7 +119,6 @@ export const shared = defineConfig({
       `
   window.dataLayer = window.dataLayer || [];
   function gtag(){
-  console.log({n:"gtag", arguments});
   dataLayer.push(arguments);
   }
   gtag('js', new Date());
@@ -135,7 +134,7 @@ export const shared = defineConfig({
   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;console.log({n:"tagmanager.google",j,f});f.parentNode.insertBefore(j,f);
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-PNT4KQ');
   `
     ],

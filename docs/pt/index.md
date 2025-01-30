@@ -68,23 +68,7 @@ hero:
 
 <!-- Mozg Resources -->
 
-<style>
-  /*  Fix: "flash of unstyled content" (FOUC). */
-  [class^='mozg-'] {
-    visibility: hidden;
-  }
-
-  [class^='mozg-']:defined {
-    visibility: visible;
-  }
-</style>
-
-<!-- mozg-components -->
-
-<!-- <mozg-embers></mozg-embers> -->
-
-<mozg-confetti></mozg-confetti>
-<mozg-animate></mozg-animate>
+<mozg-my-vitepress></mozg-my-vitepress>
 
 <style>
   mozg-google-sign-in {
@@ -100,8 +84,6 @@ hero:
 </style>
 
 <mozg-google-sign-in></mozg-google-sign-in>
-
-<!-- <mozg-web-gl-mouse-controlled-snow></mozg-web-gl-mouse-controlled-snow> -->
 
 <!-- Social Links -->
 

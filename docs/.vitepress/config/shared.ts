@@ -67,6 +67,10 @@ export const shared = defineConfig({
 
   /* prettier-ignore */
   head: [
+    ['meta', { name: 'Cache-Control', content: 'no-cache, no-store, must-revalidate' }],
+    ['meta', { name: 'Pragma', content: 'no-cache' }],
+    ['meta', { name: 'Expires', content: '0' }],
+
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo-mini.svg' }],
     ['link', { rel: 'icon', type: 'image/png', href: '/logo-mini.png' }],
     ['meta', { name: 'theme-color', content: '#5f67ee' }],
@@ -78,16 +82,17 @@ export const shared = defineConfig({
     ['meta', { property: 'og:url', content: 'https://mozg.com.br/' }],
     // ['script', { src: 'https://cdn.usefathom.com/script.js', 'data-site': 'AZBRSFGG', 'data-spa': 'auto', defer: '' }],
     ['link', { rel: 'manifest',  href: '/manifest.json' }], 
-    ['script', { type: 'module',  src: '/main.js', defer: '' }],
+    ['script', { type: 'module',  src: '/main.js?rand' }],
     ['link', { rel: 'stylesheet', href: '/tailwind.css?inline' }],
     ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' }],
-    // ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.32' }],
-    ['script', { type: 'module', src: 'http://localhost:5173/src/index.ts' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.33' }],
+    // ['script', { type: 'module', src: 'http://localhost:5173/src/index.ts' }],
     // ['script', { type: 'module', src: 'mozg-web-components.es.js' }],
      [
       'script',
       { type: 'module' },
       `;(() => {
+      console.log({name:"🟢🟢🟢🟢", url:window.location.href})
       })()`
     ] ,
     // https://analytics.google.com/analytics/web/#/a73869264p474402691/admin/streams/table/10179988960
@@ -102,9 +107,7 @@ export const shared = defineConfig({
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-WCNGF2YB71', {
-        'cookie_flags': 'SameSite=None;Secure'  // Garantindo o atributo correto para cookies
-      });
+      gtag('config', 'G-WCNGF2YB71');
       `
     ],
     // https://tagmanager.google.com/#/admin/accounts/491416460/containers/2618425/install?containerDraftId=6

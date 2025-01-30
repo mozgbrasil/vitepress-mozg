@@ -30,7 +30,8 @@ export class Program {
   mozgConfettiParty() {
     // return
 
-    const jsPath = document.querySelector('#app')
+    // const jsPath = document.querySelector('#app')
+    const jsPath = document.querySelector('#VPContent')
 
     if (jsPath instanceof HTMLElement) {
       let element = ''
@@ -44,7 +45,26 @@ export class Program {
       // element = document.createElement('mozg-embers')
       // jsPath.insertBefore(element, jsPath.firstChild)
 
-      element = document.createElement('mozg-snowy-procedural-landscape')
+      // element = document.createElement('mozg-snowy-procedural-landscape')
+      // jsPath.insertBefore(element, jsPath.firstChild)
+
+      // function isHomePage() {
+      //   console.log(window.location.pathname)
+      //   const homePath = '/' // Caminho relativo da página inicial
+      //   return window.location.pathname === homePath
+      // }
+
+      // element = document.createElement('mozg-simple-css-waves')
+      // jsPath.insertBefore(element, jsPath.firstChild)
+
+      // if (isHomePage()) {
+
+      // }
+
+      // element = document.createElement('mozg-web-gl-mouse-controlled-snow')
+      // jsPath.insertBefore(element, jsPath.firstChild)
+
+      element = document.createElement('mozg-interactive-grid-effect')
       jsPath.insertBefore(element, jsPath.firstChild)
 
       // Verifique se o contêiner tem filhos
@@ -71,6 +91,9 @@ export class Program {
 function init() {
   console.log('init')
 
+  const jsPath = document.querySelector('#VPContent > div')
+  jsPath.style.margin = 0
+
   const programInstance = new Program()
   programInstance.execute()
 }
@@ -92,3 +115,8 @@ window.addEventListener('load', () => {
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded')
 })
+
+console.log('****************** URL completa:', window.location.href)
+console.log('Caminho da URL:', window.location.pathname)
+console.log('Parâmetros de consulta:', window.location.search)
+console.log('Fragmento (âncora):', window.location.hash)

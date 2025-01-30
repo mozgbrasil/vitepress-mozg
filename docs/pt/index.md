@@ -25,33 +25,33 @@ hero:
 ---
 
 <style>
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    #bd34fe 30%,
+    #41d1ff
+  );
+
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #bd34fe 50%,
+    #47caff 50%
+  );
+  --vp-home-hero-image-filter: blur(44px);
+}
+
+@media (min-width: 640px) {
   :root {
-    --vp-home-hero-name-color: transparent;
-    --vp-home-hero-name-background: -webkit-linear-gradient(
-      120deg,
-      #bd34fe 30%,
-      #41d1ff
-    );
-
-    --vp-home-hero-image-background-image: linear-gradient(
-      -45deg,
-      #bd34fe 50%,
-      #47caff 50%
-    );
-    --vp-home-hero-image-filter: blur(44px);
+    --vp-home-hero-image-filter: blur(56px);
   }
+}
 
-  @media (min-width: 640px) {
-    :root {
-      --vp-home-hero-image-filter: blur(56px);
-    }
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(68px);
   }
-
-  @media (min-width: 960px) {
-    :root {
-      --vp-home-hero-image-filter: blur(68px);
-    }
-  }
+}
 </style>
 
 <!-- Google Tag Manager (noscript) -->
@@ -85,6 +85,21 @@ hero:
 
 <mozg-confetti></mozg-confetti>
 <mozg-animate></mozg-animate>
+
+<style>
+  mozg-google-sign-in {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+</style>
+
+<mozg-google-sign-in></mozg-google-sign-in>
 
 <!-- <mozg-web-gl-mouse-controlled-snow></mozg-web-gl-mouse-controlled-snow> -->
 
@@ -147,8 +162,6 @@ hero:
   }
 </style>
 
-<mozg-inner-glow-card-animation>
-
 <div class="icons-container">
   <!-- https://fontawesome.com/icons -->
   <a
@@ -187,45 +200,3 @@ hero:
     <i class="fa-solid fa-sitemap fa-2xl"></i>
   </a>
 </div>
-</mozg-inner-glow-card-animation>
-
-<script>
-  function init() {
-    console.log('init')
-
-  
-  }
-
-  console.log({ readyState: document.readyState })
-
-  if (document.readyState === 'complete') {
-    init()
-  } else {
-    window.addEventListener('load', init, false)
-  }
-</script>
-
-<!-- Social Links -->
-
-<style>
-  mozg-google-sign-in {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-</style>
-
-<mozg-google-sign-in></mozg-google-sign-in>
-
-<script setup>
-  import { onMounted } from 'vue'
-
-  onMounted(() => {
-    console.log(window)
-  })
-</script>

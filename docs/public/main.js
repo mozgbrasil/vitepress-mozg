@@ -30,7 +30,7 @@ class Program {
     // return
 
     // const jsPath = document.querySelector('#app')
-    const jsPath = document.querySelector('#VPContent')
+    const jsPath = document.querySelector('.is-home')
 
     if (jsPath instanceof HTMLElement) {
       let element = ''
@@ -63,8 +63,8 @@ class Program {
       // element = document.createElement('mozg-web-gl-mouse-controlled-snow')
       // jsPath.insertBefore(element, jsPath.firstChild)
 
-      // element = document.createElement('mozg-interactive-grid-effect')
-      // jsPath.insertBefore(element, jsPath.firstChild)
+      element = document.createElement('mozg-interactive-grid-effect')
+      jsPath.insertBefore(element, jsPath.firstChild)
 
       // Verifique se o contêiner tem filhos
       // if (jsPath.firstChild) {
@@ -96,6 +96,10 @@ function init() {
   const programInstance = new Program()
   programInstance.execute()
 }
+
+// setInterval(() => {
+//   init()
+// }, 1000)
 
 if (document.readyState === 'complete') {
   console.log({ readyState: document.readyState })

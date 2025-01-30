@@ -72,7 +72,6 @@ function displayNextElement() {
   setCookie('currentIndex', currentIndex, 365)
 
   // append next element
-
   const jsPath = document.querySelector('.VPContent')
 
   if (jsPath instanceof HTMLElement) {
@@ -105,11 +104,12 @@ function isHomePage() {
 }
 
 function getIn(status) {
-  console.log({ name: '🟢 js', status, url: window.location.href })
-
-  displayNextElement()
-  mozgVitepressMargin()
-  mozgPwa()
+  if (status === 'addEventListener load x') {
+    console.log({ name: 'js ', status, url: window.location.href })
+    displayNextElement()
+    mozgVitepressMargin()
+    mozgPwa()
+  }
 }
 
 if (document.readyState === 'complete') {

@@ -66,11 +66,13 @@ export const shared = defineConfig({
   },
 
   /* prettier-ignore */
-  head: [
-    ['meta', { name: 'Cache-Control', content: 'no-cache, no-store, must-revalidate' }],
+  head:  [
+    [
+      'meta',
+      { name: 'Cache-Control', content: 'no-cache, no-store, must-revalidate' }
+    ],
     ['meta', { name: 'Pragma', content: 'no-cache' }],
     ['meta', { name: 'Expires', content: '0' }],
-
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo-mini.svg' }],
     ['link', { rel: 'icon', type: 'image/png', href: '/logo-mini.png' }],
     ['meta', { name: 'theme-color', content: '#5f67ee' }],
@@ -81,46 +83,61 @@ export const shared = defineConfig({
     ['meta', { property: 'og:image', content: 'https://mozg.com.br/og.jpg' }],
     ['meta', { property: 'og:url', content: 'https://mozg.com.br/' }],
     // ['script', { src: 'https://cdn.usefathom.com/script.js', 'data-site': 'AZBRSFGG', 'data-spa': 'auto', defer: '' }],
-    ['link', { rel: 'manifest',  href: '/manifest.json' }], 
-    ['script', { type: 'module',  src: '/main.js?rand' }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }], 
+    ['script', { async: '', type: 'module', src: `/main.js?t=${Date.now()}` }],
     ['link', { rel: 'stylesheet', href: '/tailwind.css?inline' }],
-    ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' }],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.33' }],
-    // ['script', { type: 'module', src: 'http://localhost:5173/src/index.ts' }],
+    [
+      'link',
+      {
+        rel: 'stylesheet',
+        href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css'
+      }
+    ],
+    // ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.33' }],
+    ['script', { type: 'module', src: 'http://localhost:5173/src/index.ts' }],
     // ['script', { type: 'module', src: 'mozg-web-components.es.js' }],
-     [
+    //    
+    [
       'script',
-      { type: 'module' },
+      {},
       `;(() => {
-      console.log({name:"🟢🟢🟢🟢", url:window.location.href})
-      })()`
-    ] ,
+  console.log({name:"🟢🟢🟢🟢${Date.now()}", url:window.location.href})
+  })()
+  `
+    ],
     // https://analytics.google.com/analytics/web/#/a73869264p474402691/admin/streams/table/10179988960
     [
       'script',
-      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-WCNGF2YB71' }
+      {
+        async: '',
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-WCNGF2YB71'
+      }
     ],
     [
       'script',
       {},
       `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-WCNGF2YB71');
-      `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){
+  console.log({n:"gtag", arguments});
+  dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-WCNGF2YB71');
+  gtag('config', 'G-WCNGF2YB71');
+  `
     ],
     // https://tagmanager.google.com/#/admin/accounts/491416460/containers/2618425/install?containerDraftId=6
     [
       'script',
       {},
       `
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-PNT4KQ');
-      `
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;console.log({n:"tagmanager.google",j,f});f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PNT4KQ');
+  `
     ],
     // https://www.google.com/adsense/new/u/0/pub-7927094983433027/sites/detail/url=mozg.com.br
     [
@@ -136,29 +153,29 @@ export const shared = defineConfig({
       'script',
       { id: 'register-sw' },
       `;(() => {      
-        // Registrar o Service Worker
-        // if ("serviceWorker" in navigator) {
-        //   navigator.serviceWorker.getRegistrations().then((registrations) => {
-        //     if (registrations.length === 0) {
-        //       // Se não houver registros, registre o Service Worker
-        //       navigator.serviceWorker
-        //         .register("/service-worker.js")
-        //         .then((registration) => {
-        //           console.log("Service Worker registrado com sucesso:");
-        //         })
-        //         .catch((error) => {
-        //           console.error("Falha ao registrar o Service Worker:", error);
-        //         });
-        //     } else {
-        //       console.log("Service Worker já registrado");
-        //     }
-        //   });
-        // }
-      })()`
-    ] ,
-    // 
+  // Registrar o Service Worker
+  // if ("serviceWorker" in navigator) {
+  //   navigator.serviceWorker.getRegistrations().then((registrations) => {
+  //     if (registrations.length === 0) {
+  //       // Se não houver registros, registre o Service Worker
+  //       navigator.serviceWorker
+  //         .register("/service-worker.js")
+  //         .then((registration) => {
+  //           console.log("Service Worker registrado com sucesso:");
+  //         })
+  //         .catch((error) => {
+  //           console.error("Falha ao registrar o Service Worker:", error);
+  //         });
+  //     } else {
+  //       console.log("Service Worker já registrado");
+  //     }
+  //   });
+  // }
+  })()
+      `
+    ]
+    //
   ],
-
   themeConfig: {
     logo: { src: '/logo-mini.svg', width: 24, height: 24 },
 

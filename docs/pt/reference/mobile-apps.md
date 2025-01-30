@@ -2,15 +2,14 @@
 outline: deep
 
 title: Mozg
-titleTemplate: Mobile apps
+titleTemplate: Aplicativo móvel
 description: Sistemas e informação
 ---
 
-<mozg-naim-portfolio></mozg-naim-portfolio>
 <mozg-card-tilted></mozg-card-tilted>
 
-# Mobile apps
+# Aplicativo móvel
 
-### **O que são Mobile apps?**
+### **O que são Aplicativo móvel?**
 
-Mobile apps são aplicativos de software desenvolvidos para serem usados em dispositivos móveis, como smartphones e tablets. Eles são otimizados para serem usados em dispositivos móveis, com interfaces especialmente desenvolvidas para cada sistema operacional e tamanho de tela.
+Aplicativo móvel são aplicativos de software desenvolvidos para serem usados em dispositivos móveis, como smartphones e tablets. Eles são otimizados para serem usados em dispositivos móveis, com interfaces especialmente desenvolvidas para cada sistema operacional e tamanho de tela.

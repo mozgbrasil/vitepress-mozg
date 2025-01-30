@@ -69,7 +69,7 @@ function nav(): DefaultTheme.NavItem[] {
       activeMatch: '/reference/'
     },
     {
-      text: 'Mobile Apps',
+      text: 'Aplicativo móvel',
       link: '/reference/mobile-apps',
       activeMatch: '/reference/'
     },
@@ -100,7 +100,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       ]
     },
     { text: 'Web Components', base: '/reference/', link: 'web-components' },
-    { text: 'Mobile Apps', base: '/reference/', link: 'mobile-apps' }
+    { text: 'Aplicativo móvel', base: '/reference/', link: 'mobile-apps' }
   ]
 }
 
@@ -118,7 +118,7 @@ function sidebarReference(): DefaultTheme.SidebarItem[] {
             { text: 'Binance', link: 'binance' }
           ]
         },
-        { text: 'Mobile Apps', link: 'mobile-apps' },
+        { text: 'Aplicativo móvel', link: 'mobile-apps' },
         {
           text: 'Apps',
           base: '/reference/app-',

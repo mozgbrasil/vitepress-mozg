@@ -93,9 +93,9 @@ export const shared = defineConfig({
         href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css'
       }
     ],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.35' }],
+    // ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.36' }],
     // ['script', { type: 'module', src: 'http://localhost:5000/src/index.ts' }],
-    // ['script', { type: 'module', src: 'http://localhost:5001/mozg-web-components.es.js' }],
+    ['script', { type: 'module', src: 'http://localhost:5001/mozg-web-components.es.js' }],
     //    
     [
       'script',

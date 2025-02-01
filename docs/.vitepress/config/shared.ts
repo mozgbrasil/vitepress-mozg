@@ -86,14 +86,7 @@ export const shared = defineConfig({
     ['link', { rel: 'manifest', href: '/manifest.json' }], 
     ['script', { async: '', type: 'module', src: `/main.js?t=${Date.now()}` }],
     ['link', { rel: 'stylesheet', href: '/tailwind.css?inline' }],
-    [
-      'link',
-      {
-        rel: 'stylesheet',
-        href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css'
-      }
-    ],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.36' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.37' }],
     // ['script', { type: 'module', src: 'http://localhost:5000/src/index.ts' }],
     // ['script', { type: 'module', src: 'http://localhost:5001/mozg-web-components.es.js' }],
     //    
@@ -152,24 +145,22 @@ export const shared = defineConfig({
       'script',
       { id: 'register-sw' },
       `;(() => {      
-  // Registrar o Service Worker
-  // if ("serviceWorker" in navigator) {
-  //   navigator.serviceWorker.getRegistrations().then((registrations) => {
-  //     if (registrations.length === 0) {
-  //       // Se não houver registros, registre o Service Worker
-  //       navigator.serviceWorker
-  //         .register("/service-worker.js")
-  //         .then((registration) => {
-  //           console.log("Service Worker registrado com sucesso:");
-  //         })
-  //         .catch((error) => {
-  //           console.error("Falha ao registrar o Service Worker:", error);
-  //         });
-  //     } else {
-  //       console.log("Service Worker já registrado");
-  //     }
-  //   });
-  // }
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      if (registrations.length === 0) {
+        navigator.serviceWorker
+          .register("/service-worker.js")
+          .then((registration) => {
+            console.log("Service Worker registrado com sucesso:");
+          })
+          .catch((error) => {
+            console.error("Falha ao registrar o Service Worker:", error);
+          });
+      } else {
+        console.log("Service Worker já registrado");
+      }
+    });
+  }
   })()
       `
     ]

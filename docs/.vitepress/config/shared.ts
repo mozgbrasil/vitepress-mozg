@@ -86,7 +86,7 @@ export const shared = defineConfig({
     ['link', { rel: 'manifest', href: '/manifest.json' }], 
     ['script', { async: '', type: 'module', src: `/main.js?t=${Date.now()}` }],
     ['link', { rel: 'stylesheet', href: '/tailwind.css?inline' }],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.37' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.38' }],
     // ['script', { type: 'module', src: 'http://localhost:5000/src/index.ts' }],
     // ['script', { type: 'module', src: 'http://localhost:5001/mozg-web-components.es.js' }],
     //    

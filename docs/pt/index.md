@@ -39,6 +39,9 @@ hero:
     #47caff 50%
   );
   --vp-home-hero-image-filter: blur(44px);
+
+  --vp-button-brand-border: #ccc;
+  --vp-button-alt-border: #ccc;
 }
 
 @media (min-width: 640px) {

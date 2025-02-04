@@ -25,54 +25,40 @@ hero:
 ---
 
 <style>
-:root {
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(
-    120deg,
-    #bd34fe 30%,
-    #41d1ff
-  );
-
-  --vp-home-hero-image-background-image: linear-gradient(
-    -45deg,
-    #bd34fe 50%,
-    #47caff 50%
-  );
-  --vp-home-hero-image-filter: blur(44px);
-
-  --vp-button-brand-border: #ccc;
-  --vp-button-alt-border: #ccc;
-}
-
-@media (min-width: 640px) {
   :root {
-    --vp-home-hero-image-filter: blur(56px);
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: -webkit-linear-gradient(
+      120deg,
+      #bd34fe 30%,
+      #41d1ff
+    );
+
+    --vp-home-hero-image-background-image: linear-gradient(
+      -45deg,
+      #bd34fe 50%,
+      #47caff 50%
+    );
+    --vp-home-hero-image-filter: blur(44px);
+
+    --vp-button-brand-border: #ccc;
+    --vp-button-alt-border: #ccc;
   }
-}
 
-@media (min-width: 960px) {
-  :root {
-    --vp-home-hero-image-filter: blur(68px);
+  @media (min-width: 640px) {
+    :root {
+      --vp-home-hero-image-filter: blur(56px);
+    }
   }
-}
-</style>
 
-<!-- Google Tag Manager (noscript) -->
+  @media (min-width: 960px) {
+    :root {
+      --vp-home-hero-image-filter: blur(68px);
+    }
+  }
 
-<noscript>
-  <iframe
-    src="https://www.googletagmanager.com/ns.html?id=GTM-PNT4KQ"
-    height="0"
-    width="0"
-    style="display: none; visibility: hidden"></iframe>
-</noscript>
+  /*  */
 
-<!-- End Google Tag Manager (noscript) -->
-
-<!-- Mozg -->
-
-<style>
-  mozg-google-sign-in {
+   mozg-google-sign-in {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -88,6 +74,21 @@ hero:
   }
 </style>
 
-<mozg-my-vitepress></mozg-my-vitepress>
+<noscript>
+  <iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-PNT4KQ"
+    height="0"
+    width="0"
+    style="display: none; visibility: hidden"
+  ></iframe>
+</noscript>
+
+<p hidden>
+  ⛔ Your browser doesn't support <code>shadowrootmode</code> attribute yet.
+</p>
+
 <mozg-google-sign-in></mozg-google-sign-in>
+
 <mozg-macosx-dock></mozg-macosx-dock>
+
+<mozg-my-vitepress></mozg-my-vitepress>

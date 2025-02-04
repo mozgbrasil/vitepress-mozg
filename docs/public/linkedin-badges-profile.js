@@ -220,7 +220,7 @@
             </a>
           </h3>
           <h4 class="profile-badge__content-profile-headline">
-            Software Engineer | Full Stack Developer | Dev Backend | Node.js, PHP, Ruby, Python, Perl | Dev Frontend | React, Angular, Ionic | DevOps
+            Software Engineer | Full Stack Developer | Dev Backend | Node.js, PHP, Ruby, Python, Perl | Dev Frontend | React, Angular, Vue, Ionic | DevOps
           </h4>
         </div>
         <a class="profile-badge__cta-btn profile-badge__cta-btn--light" href="https://br.linkedin.com/in/mozgbrasil?trk=public-profile-badge-profile-badge-view-profile-cta" target="_blank" data-tracking-control-name="public-profile-badge-profile-badge-view-profile-cta" data-tracking-will-navigate>

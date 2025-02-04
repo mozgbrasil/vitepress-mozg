@@ -94,8 +94,9 @@ export const shared = defineConfig({
           console.log("Components are ready");
         });
       })()
-  `],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.38' }],
+    `],
+    ['link', { rel: 'stylesheet', href: '/tailwind.css' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.39' }],
     // ['script', { type: 'module', src: 'http://localhost:5000/src/index.ts' }],
     // ['script', { type: 'module', src: 'http://localhost:5001/mozg-web-components.es.js' }],
     //
@@ -103,7 +104,7 @@ export const shared = defineConfig({
       ;(() => {
         console.log({name:"🟢 head", d: ${Date.now()}, url:window.location.href})
       })()
-  `],
+    `],
     // https://analytics.google.com/analytics/web/#/a73869264p474402691/admin/streams/table/10179988960
     [
       'script',
@@ -116,25 +117,25 @@ export const shared = defineConfig({
       'script',
       {},
       `
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){
-  dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
-  gtag('config', 'G-WCNGF2YB71');
-  gtag('config', 'G-WCNGF2YB71');
-  `],
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+    dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-WCNGF2YB71');
+    gtag('config', 'G-WCNGF2YB71');
+    `],
     // https://tagmanager.google.com/#/admin/accounts/491416460/containers/2618425/install?containerDraftId=6
     [
       'script',
       {},
       `
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PNT4KQ');
-  `],
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PNT4KQ');
+    `],
     // https://www.google.com/adsense/new/u/0/pub-7927094983433027/sites/detail/url=mozg.com.br
     [
       'script',

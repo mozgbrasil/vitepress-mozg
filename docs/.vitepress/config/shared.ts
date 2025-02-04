@@ -83,21 +83,27 @@ export const shared = defineConfig({
     ['meta', { property: 'og:image', content: 'https://mozg.com.br/og.jpg' }],
     ['meta', { property: 'og:url', content: 'https://mozg.com.br/' }],
     // ['script', { src: 'https://cdn.usefathom.com/script.js', 'data-site': 'AZBRSFGG', 'data-spa': 'auto', defer: '' }],
-    ['link', { rel: 'manifest', href: '/manifest.json' }], 
-    ['script', { async: '', type: 'module', src: `/main.js?t=${Date.now()}` }],
-    ['link', { rel: 'stylesheet', href: '/tailwind.css?inline' }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],    
+    ['script', { src: `/main.js` }],
+    ['link', { rel: 'stylesheet', href: '/main.css' }],
+    ['script', { src: 'https://unpkg.com/@webcomponents/webcomponentsjs@2.8.0/webcomponents-bundle.js' }],
+    ['script', {}, `
+      ;(() => {
+        window.addEventListener("WebComponentsReady", function (e) {
+          // imports are loaded and elements have been registered
+          console.log("Components are ready");
+        });
+      })()
+  `],
     ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.38' }],
     // ['script', { type: 'module', src: 'http://localhost:5000/src/index.ts' }],
     // ['script', { type: 'module', src: 'http://localhost:5001/mozg-web-components.es.js' }],
-    //    
-    [
-      'script',
-      {},
-      `;(() => {
-  console.log({name:"🟢 head", d: ${Date.now()}, url:window.location.href})
-  })()
-  `
-    ],
+    //
+    ['script', {}, `
+      ;(() => {
+        console.log({name:"🟢 head", d: ${Date.now()}, url:window.location.href})
+      })()
+  `],
     // https://analytics.google.com/analytics/web/#/a73869264p474402691/admin/streams/table/10179988960
     [
       'script',
@@ -117,8 +123,7 @@ export const shared = defineConfig({
   gtag('js', new Date());
   gtag('config', 'G-WCNGF2YB71');
   gtag('config', 'G-WCNGF2YB71');
-  `
-    ],
+  `],
     // https://tagmanager.google.com/#/admin/accounts/491416460/containers/2618425/install?containerDraftId=6
     [
       'script',
@@ -129,8 +134,7 @@ export const shared = defineConfig({
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-PNT4KQ');
-  `
-    ],
+  `],
     // https://www.google.com/adsense/new/u/0/pub-7927094983433027/sites/detail/url=mozg.com.br
     [
       'script',
@@ -144,26 +148,26 @@ export const shared = defineConfig({
     [
       'script',
       { id: 'register-sw' },
-      `;(() => {      
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.getRegistrations().then((registrations) => {
-      if (registrations.length === 0) {
-        navigator.serviceWorker
-          .register("/service-worker.js")
-          .then((registration) => {
-            console.log("Service Worker registrado com sucesso:");
-          })
-          .catch((error) => {
-            console.error("Falha ao registrar o Service Worker:", error);
-          });
-      } else {
-        console.log("Service Worker já registrado");
-      }
-    });
-  }
-  })()
       `
-    ]
+// ;(() => {      
+// if ("serviceWorker" in navigator) {
+//   navigator.serviceWorker.getRegistrations().then((registrations) => {
+//     if (registrations.length === 0) {
+//       navigator.serviceWorker
+//         .register("/service-worker.js")
+//         .then((registration) => {
+//           console.log("Service Worker registrado com sucesso:");
+//         })
+//         .catch((error) => {
+//           console.error("Falha ao registrar o Service Worker:", error);
+//         });
+//     } else {
+//       console.log("Service Worker já registrado");
+//     }
+//   });
+// }
+// })()
+  `],
     //
   ],
   themeConfig: {

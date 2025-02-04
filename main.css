@@ -1,0 +1,30 @@
+/* Example layout */
+
+body {
+  background-color: #e0eff9;
+}
+
+#VPContent > div > div > div.content {
+  background-color: #e7edf1;
+}
+
+#VPContent
+  > div
+  > div
+  > div.content
+  > div
+  > footer
+  > nav
+  > div:nth-child(2)
+  > a,
+#VPContent
+  > div
+  > div
+  > div.content
+  > div
+  > footer
+  > nav
+  > div:nth-child(3)
+  > a {
+  background-color: #fff;
+}

@@ -96,7 +96,7 @@ export const shared = defineConfig({
       })()
     `],
     ['link', { rel: 'stylesheet', href: '/tailwind.css' }],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.39' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.40' }],
     // ['script', { type: 'module', src: 'http://localhost:5000/src/index.ts' }],
     // ['script', { type: 'module', src: 'http://localhost:5001/mozg-web-components.es.js' }],
     //

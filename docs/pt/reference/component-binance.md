@@ -41,10 +41,3 @@ $ npm i @mozgbrasil/web-components
 ## **Veja o resultado**
 
 <Binance />
- 
-<style>
- body {
-    position: absolute;
-    overflow: auto;
- }
-</style>

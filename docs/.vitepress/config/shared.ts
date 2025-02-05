@@ -102,7 +102,7 @@ export const shared = defineConfig({
     //
     ['script', {}, `
       ;(() => {
-        console.log({name:"🟢 head", d: ${Date.now()}, url:window.location.href})
+        console.log({name:"🟢 heasd", d: ${Date.now()}, url:window.location.href})
       })()
     `],
     // https://analytics.google.com/analytics/web/#/a73869264p474402691/admin/streams/table/10179988960

@@ -29,8 +29,6 @@ Meu nome é Marcio dos Santos Amorim. Sou desenvolvedor de software desde 1999 e
 >  
 </div>
 
-### Curriculum
+## Curriculum
 
-<iframe src="/assets/curriculum.pdf" width="100%" height="600px"></iframe>
-<iframe src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.exemplo.com/arquivo.pdf" width="100%" height="600px"></iframe>
-<p><a href="https://www.exemplo.com/arquivo.pdf" download>Baixar o PDF</a></p>
+<iframe src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://mozg.com.br/assets/Profile.pdf" width="100%" height="600px"></iframe>

@@ -96,8 +96,39 @@ export const shared = defineConfig({
       })()
     `],
     ['link', { rel: 'stylesheet', href: '/tailwind.css' }],
-    // ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.40' }],
-    ['script', { type: 'module', src: 'http://192.168.1.10:5000/src/index.ts' }],
+    ['script', { crossorigin: 'anonymous', src: 'https://js.sentry-cdn.com/248f36517c640f644a4030f19ae070c1.min.js' }],
+    ['script', {}, `
+      ;(() => {
+        window.sentryOnLoad = function () {
+          Sentry.init({
+            dsn: "https://248f36517c640f644a4030f19ae070c1@o435772.ingest.us.sentry.io/4508770207137792",
+            integrations: [
+              Sentry.feedbackIntegration({
+                // Additional SDK configuration goes in here, for example:
+                colorScheme: "system",
+                isNameRequired: true,
+                isEmailRequired: true,
+              }),
+            ],
+          });
+
+          Sentry.lazyLoadIntegration("feedbackIntegration")
+            .then((feedbackIntegration) => {
+              Sentry.addIntegration(
+                feedbackIntegration({
+                  // User Feedback configuration options
+                })
+              );
+            })
+            .catch(() => {
+              // this can happen if e.g. a network error occurs,
+              // in this case User Feedback will not be enabled
+            });
+        };
+      })()
+    `],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.40' }],
+    // ['script', { type: 'module', src: 'http://192.168.1.10:5000/src/index.ts' }],
     // ['script', { src: 'http://localhost:5001/mozg-web-components.umd.js' }],
     //
     ['script', {}, `

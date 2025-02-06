@@ -67,12 +67,6 @@ export const shared = defineConfig({
 
   /* prettier-ignore */
   head:  [
-    [
-      'meta',
-      { name: 'Cache-Control', content: 'no-cache, no-store, must-revalidate' }
-    ],
-    ['meta', { name: 'Pragma', content: 'no-cache' }],
-    ['meta', { name: 'Expires', content: '0' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo-mini.svg' }],
     ['link', { rel: 'icon', type: 'image/png', href: '/logo-mini.png' }],
     ['meta', { name: 'theme-color', content: '#5f67ee' }],
@@ -158,8 +152,8 @@ export const shared = defineConfig({
         });
       })()
     `],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.40' }],
-    // ['script', { type: 'module', src: 'http://192.168.1.10:5000/src/index.ts' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.41' }],
+    // ['script', { type: 'module', src: 'http://192.168.1.10:5002/src/index.ts' }],
     // ['script', { src: 'http://localhost:5001/mozg-web-components.umd.js' }],
     //
     ['script', {}, `

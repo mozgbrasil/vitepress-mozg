@@ -4,6 +4,10 @@ titleTemplate: O que é Mozg
 description: Meu nome é Marcio, venho desenvolvendo software desde 1999, estou sempre me mantendo atualizado a fim de adotar as melhores práticas e oferecer um excelente serviço prezando por desenvolver tecnologia que agreguem valor, automação e lucratividade.
 ---
 
+[checkmark]: https://mozg.com.br/logo-mini.png 'MOZG'
+
+![valid XHTML][checkmark]
+
 # O que é Mozg?
 
 Mozg é um projeto criado em fevereiro de 2016 por [Marcio dos Santos Amorim](#sobre-marcio-dos-santos-amorim), que funciona como um laboratório para o desenvolvimento de softwares inovadores e eficientes. Seu objetivo é experimentar novas tecnologias, explorar soluções criativas e entregar ferramentas que agreguem valor aos usuários.
@@ -24,3 +28,9 @@ Meu nome é Marcio dos Santos Amorim. Sou desenvolvedor de software desde 1999 e
   data-version="v1"
 >  
 </div>
+
+### Curriculum
+
+<iframe src="/assets/curriculum.pdf" width="100%" height="600px"></iframe>
+<iframe src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.exemplo.com/arquivo.pdf" width="100%" height="600px"></iframe>
+<p><a href="https://www.exemplo.com/arquivo.pdf" download>Baixar o PDF</a></p>

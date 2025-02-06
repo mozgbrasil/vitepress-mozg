@@ -61,7 +61,7 @@ Essa abordagem garante um desenvolvimento ágil, menor custo de manutenção e c
 
 <div class="video-container">
   <div class="video-wrapper"  >
-  <iframe class="video-iframe" src="https://www.youtube.com/embed/sAuyGvHewsY?autoplay=1&mute=1&controls=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe class="video-iframe" src="https://www.youtube.com/embed/OSTmbnGMKj8?autoplay=1&mute=1&controls=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </div>
 

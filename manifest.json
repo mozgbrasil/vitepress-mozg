@@ -12,7 +12,6 @@
   "features": ["Cross Platform", "low-latency inking", "fast", "useful AI"],
   "orientation": "any",
   "background_color": "#FFFFFF",
-  "related_applications": [],
   "prefer_related_applications": false,
   "display_override": ["window-controls-overlay"],
   "screenshots": [
@@ -24,44 +23,7 @@
       "label": "Application"
     }
   ],
-
   "icons": [
-    {
-      "src": "/icon.png",
-      "type": "image/png",
-      "sizes": "48x48",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/icon.png",
-      "type": "image/png",
-      "sizes": "72x72",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/icon.png",
-      "type": "image/png",
-      "sizes": "96x96",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/icon.png",
-      "type": "image/png",
-      "sizes": "128x128",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/icon.png",
-      "type": "image/png",
-      "sizes": "192x192",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/icon.png",
-      "type": "image/png",
-      "sizes": "256x256",
-      "purpose": "any maskable"
-    },
     {
       "src": "/icon.png",
       "type": "image/png",

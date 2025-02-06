@@ -96,13 +96,13 @@ export const shared = defineConfig({
       })()
     `],
     ['link', { rel: 'stylesheet', href: '/tailwind.css' }],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.40' }],
-    // ['script', { type: 'module', src: 'http://localhost:5000/src/index.ts' }],
-    // ['script', { type: 'module', src: 'http://localhost:5001/mozg-web-components.es.js' }],
+    // ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.40' }],
+    ['script', { type: 'module', src: 'http://192.168.1.10:5000/src/index.ts' }],
+    // ['script', { src: 'http://localhost:5001/mozg-web-components.umd.js' }],
     //
     ['script', {}, `
       ;(() => {
-        console.log({name:"🟢 heasd", d: ${Date.now()}, url:window.location.href})
+        console.log({name:"🟢 head", d: ${Date.now()}, url:window.location.href})
       })()
     `],
     // https://analytics.google.com/analytics/web/#/a73869264p474402691/admin/streams/table/10179988960

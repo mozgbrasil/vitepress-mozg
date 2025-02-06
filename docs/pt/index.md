@@ -39,7 +39,6 @@ hero:
       #47caff 50%
     );
     --vp-home-hero-image-filter: blur(44px);
-
     --vp-button-brand-border: #ccc;
     --vp-button-alt-border: #ccc;
   }
@@ -56,9 +55,7 @@ hero:
     }
   }
 
-  /*  */
-
-   mozg-google-sign-in {
+  mozg-google-sign-in {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -87,8 +84,12 @@ hero:
   ⛔ Your browser doesn't support <code>shadowrootmode</code> attribute yet.
 </p>
 
+<!-- <ShadowComponent /> -->
+
+<ClientOnly>
 <mozg-google-sign-in></mozg-google-sign-in>
 
 <mozg-macosx-dock></mozg-macosx-dock>
 
 <mozg-my-vitepress></mozg-my-vitepress>
+</ClientOnly>

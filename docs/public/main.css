@@ -1,3 +1,15 @@
+/*  Fix: "flash of unstyled content" (FOUC). */
+[class^='mozg-'] {
+  /* visibility: hidden; */
+  background: blue;
+}
+
+[class^='mozg-']:defined {
+  /* visibility: visible; */
+}
+
+/*  */
+
 #VPContent > div > div.VPHero.has-image.VPHomeHero > div {
   /* display: flex;
   justify-content: center;

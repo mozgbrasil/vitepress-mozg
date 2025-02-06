@@ -148,6 +148,16 @@ export const shared = defineConfig({
         a.appendChild(r);
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     `],
+    ['script', { src: 'https://cdn.amplitude.com/script/5bc76c5d1a252c44d2396b1b42a1d507.js' }],
+    ['script', {}, `
+      ;(() => {
+        window.amplitude.add(window.sessionReplay.plugin({ sampleRate: 1 }));
+        window.amplitude.init("5bc76c5d1a252c44d2396b1b42a1d507", {
+          fetchRemoteConfig: true,
+          autocapture: true,
+        });
+      })()
+    `],
     ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.40' }],
     // ['script', { type: 'module', src: 'http://192.168.1.10:5000/src/index.ts' }],
     // ['script', { src: 'http://localhost:5001/mozg-web-components.umd.js' }],

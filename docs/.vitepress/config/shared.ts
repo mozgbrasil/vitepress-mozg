@@ -127,6 +127,12 @@ export const shared = defineConfig({
         };
       })()
     `],
+    ['script', { crossorigin: 'anonymous', src: 'https://cdn.lrkt-in.com/LogRocket.min.js' }],
+    ['script', {}, `
+      ;(() => {
+        window.LogRocket && window.LogRocket.init("vuieju/project-mozgcombr");
+      })()
+    `],
     ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.40' }],
     // ['script', { type: 'module', src: 'http://192.168.1.10:5000/src/index.ts' }],
     // ['script', { src: 'http://localhost:5001/mozg-web-components.umd.js' }],

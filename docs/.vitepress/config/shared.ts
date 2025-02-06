@@ -133,6 +133,21 @@ export const shared = defineConfig({
         window.LogRocket && window.LogRocket.init("vuieju/project-mozgcombr");
       })()
     `],
+    ['script', {}, `
+      ;(function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 5294163, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    `],
     ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.40' }],
     // ['script', { type: 'module', src: 'http://192.168.1.10:5000/src/index.ts' }],
     // ['script', { src: 'http://localhost:5001/mozg-web-components.umd.js' }],

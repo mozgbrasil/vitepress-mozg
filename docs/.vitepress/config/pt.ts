@@ -123,7 +123,8 @@ function sidebarReference(): DefaultTheme.SidebarItem[] {
           text: 'Apps',
           base: '/reference/app-',
           items: [
-            { text: 'Fizzy', link: 'fizzy' },
+            { text: 'Mozg PWA', link: 'mozg-pwa' },
+            { text: 'Mozg TWA', link: 'mozg-twa' },
             { text: 'Fizzy', link: 'fizzy' }
           ]
         }

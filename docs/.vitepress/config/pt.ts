@@ -125,7 +125,7 @@ function sidebarReference(): DefaultTheme.SidebarItem[] {
           items: [
             { text: 'Mozg PWA', link: 'mozg-pwa' },
             { text: 'Mozg TWA', link: 'mozg-twa' },
-            { text: 'Fizzy', link: 'fizzy' }
+            { text: 'Mozg Híbrido', link: 'mozg-hibrido' }
           ]
         }
       ]

@@ -29,7 +29,7 @@ const isShadowRootModeSupported =
 //
 
 function getIn(status) {
-  console.log({ name: 'getIn ', status, url: window.location.href })
+  // console.log({ name: 'getIn ', status, url: window.location.href })
 
   new window.MyApp().executeMethod('Calc')
 
@@ -56,3 +56,13 @@ window.addEventListener('load', () => {
 document.addEventListener('DOMContentLoaded', () => {
   getIn('DOMContentLoaded')
 })
+
+//
+
+function autoIterateToggle(param) {
+  console.log('autoIterateToggle', param)
+  const autoIterateToggle = document
+    .querySelector('mozg-popover-popup > mozg-binance')
+    .shadowRoot.querySelector('#autoIterateToggle')
+  autoIterateToggle.click()
+}

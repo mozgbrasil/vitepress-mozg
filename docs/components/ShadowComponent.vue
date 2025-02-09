@@ -1,5 +1,9 @@
 <template>
-  <div ref="host">host</div>
+  <p hidden>
+    ⛔ Your browser doesn't support
+    <code>shadowrootmode</code>
+    attribute yet.
+  </p>
 </template>
 
 <script setup lang="ts">
@@ -8,17 +12,11 @@ import { ref, onMounted } from 'vue'
 const host = ref(null)
 
 onMounted(() => {
-  const shadowRoot = host.value.attachShadow({ mode: 'open' })
+  const isShadowRootModeSupported =
+    HTMLTemplateElement.prototype.hasOwnProperty('shadowRootMode')
 
-  ;(function () {
-    const template = document.createElement('template')
-    template.innerHTML = `<span>I'm in the shadow DOM</span>`
-
-    shadowRoot.appendChild(template.content.cloneNode(true))
-  })()
-  ;(function () {
-    // const template = document.createElement('mozg-google-sign-in')
-    // shadowRoot.appendChild(template)
-  })()
+  document
+    .querySelector('p[hidden]')
+    .toggleAttribute('hidden', isShadowRootModeSupported)
 })
 </script>

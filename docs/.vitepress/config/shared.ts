@@ -90,140 +90,254 @@ export const shared = defineConfig({
       })()
     `],
     ['link', { rel: 'stylesheet', href: '/tailwind.css' }],
-    ['script', { crossorigin: 'anonymous', src: 'https://js.sentry-cdn.com/248f36517c640f644a4030f19ae070c1.min.js' }],
+ 
     ['script', {}, `
-      ;(() => {
-        window.sentryOnLoad = function () {
-          Sentry.init({
-            dsn: "https://248f36517c640f644a4030f19ae070c1@o435772.ingest.us.sentry.io/4508770207137792",
-            integrations: [
-              Sentry.feedbackIntegration({
-                // Additional SDK configuration goes in here, for example:
-                colorScheme: "system",
-                isNameRequired: true,
-                isEmailRequired: true,
-              }),
-            ],
-          });
+if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+  // console.log("Você está em localhost.");
+} else {
+  // console.log("Você não está em localhost.");
 
-          Sentry.lazyLoadIntegration("feedbackIntegration")
-            .then((feedbackIntegration) => {
-              Sentry.addIntegration(
-                feedbackIntegration({
-                  // User Feedback configuration options
-                })
-              );
-            })
-            .catch(() => {
-              // this can happen if e.g. a network error occurs,
-              // in this case User Feedback will not be enabled
-            });
-        };
-      })()
-    `],
-    ['script', { crossorigin: 'anonymous', src: 'https://cdn.lrkt-in.com/LogRocket.min.js' }],
-    ['script', {}, `
-      ;(() => {
-        window.LogRocket && window.LogRocket.init("vuieju/project-mozgcombr");
-      })()
-    `],
-    ['script', {}, `
-      ;(function (h, o, t, j, a, r) {
-        h.hj =
-          h.hj ||
-          function () {
-            (h.hj.q = h.hj.q || []).push(arguments);
-          };
-        h._hjSettings = { hjid: 5294163, hjsv: 6 };
-        a = o.getElementsByTagName("head")[0];
-        r = o.createElement("script");
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-    `],
-    ['script', { src: 'https://cdn.amplitude.com/script/5bc76c5d1a252c44d2396b1b42a1d507.js' }],
-    ['script', {}, `
-      ;(() => {
-        window.amplitude.add(window.sessionReplay.plugin({ sampleRate: 1 }));
-        window.amplitude.init("5bc76c5d1a252c44d2396b1b42a1d507", {
-          fetchRemoteConfig: true,
-          autocapture: true,
+  (function(w,d,s,l,i) {
+    var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s);
+
+    // Define os atributos do script
+    j.async = true;
+    j.crossOrigin = 'anonymous';
+    j.src = 'https://js.sentry-cdn.com/248f36517c640f644a4030f19ae070c1.min.js';
+    j.onload = () => {
+      // console.log("onload");
+
+      window.sentryOnLoad = function () {
+        Sentry.init({
+          dsn: "https://248f36517c640f644a4030f19ae070c1@o435772.ingest.us.sentry.io/4508770207137792",
+          integrations: [
+            Sentry.feedbackIntegration({
+              // Additional SDK configuration goes in here, for example:
+              colorScheme: "system",
+              isNameRequired: true,
+              isEmailRequired: true,
+            }),
+          ],
         });
-      })()
+
+        Sentry.lazyLoadIntegration("feedbackIntegration")
+          .then((feedbackIntegration) => {
+            Sentry.addIntegration(
+              feedbackIntegration({
+                // User Feedback configuration options
+              })
+            );
+          })
+          .catch(() => {
+            // this can happen if e.g. a network error occurs,
+            // in this case User Feedback will not be enabled
+          });
+      };
+
+    };
+    j.onerror = (err) => {
+      console.log("onerror", err);
+    };
+  
+    // Insere o script no DOM
+    f.parentNode.insertBefore(j, f);
+
+  })(window, document, 'script');
+
+} 
     `],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.41' }],
+    ['script', {}, `
+if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+  // console.log("Você está em localhost.");
+} else {
+  // console.log("Você não está em localhost.");
+
+  (function(w,d,s,l,i) {
+    var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s);
+
+    // Define os atributos do script
+    j.async = true;
+    j.crossOrigin = 'anonymous';
+    j.src = 'https://cdn.lrkt-in.com/LogRocket.min.js';
+    j.onload = () => {
+      // console.log("onload");
+      window.LogRocket && window.LogRocket.init("vuieju/project-mozgcombr");
+    };
+    j.onerror = (err) => {
+      console.log("onerror", err);
+    };
+
+    // Insere o script no DOM
+    f.parentNode.insertBefore(j, f);
+
+  })(window, document, 'script'); 
+}
+    `],
+    ['script', {}, `
+if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+  // console.log("Você está em localhost.");
+} else {
+  // console.log("Você não está em localhost.");
+
+  ;(function (h, o, t, j, a, r) {
+    h.hj =
+      h.hj ||
+      function () {
+        (h.hj.q = h.hj.q || []).push(arguments);
+      };
+    h._hjSettings = { hjid: 5294163, hjsv: 6 };
+    a = o.getElementsByTagName("head")[0];
+    r = o.createElement("script");
+    r.async = 1;
+    r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+    a.appendChild(r);
+  })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+
+}
+    `],
+    ['script', {}, `
+if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+  // console.log("Você está em localhost.");
+} else {
+  // console.log("Você não está em localhost.");
+
+
+  (function(w,d,s,l,i) {
+    var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s);
+
+    // Define os atributos do script
+    j.async = true;
+    j.crossOrigin = 'anonymous';
+    j.src = 'https://cdn.amplitude.com/script/5bc76c5d1a252c44d2396b1b42a1d507.js';
+    j.onload = () => {
+      // console.log("onload");
+      window.amplitude.add(window.sessionReplay.plugin({ sampleRate: 1 }));
+      window.amplitude.init("5bc76c5d1a252c44d2396b1b42a1d507", {
+        fetchRemoteConfig: true,
+        autocapture: true,
+      });
+    };
+    j.onerror = (err) => {
+      console.log("onerror", err);
+    };
+
+    // Insere o script no DOM
+    f.parentNode.insertBefore(j, f);
+
+  })(window, document, 'script'); 
+
+}
+    `],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.42' }],
     // ['script', { type: 'module', src: 'http://192.168.1.10:5002/src/index.ts' }],
     // ['script', { src: 'http://localhost:5001/mozg-web-components.umd.js' }],
-    //
-    ['script', {}, `
-      ;(() => {
-        console.log({name:"🟢 head", d: ${Date.now()}, url:window.location.href})
-      })()
-    `],
     // https://analytics.google.com/analytics/web/#/a73869264p474402691/admin/streams/table/10179988960
-    [
-      'script',
-      {
-        async: '',
-        src: 'https://www.googletagmanager.com/gtag/js?id=G-WCNGF2YB71'
+    [ 'script', {}, `
+if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+  // console.log("Você está em localhost.");
+} else {
+  // console.log("Você não está em localhost.");
+
+  (function(w,d,s,l,i) {
+    var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s);
+
+    // Define os atributos do script
+    j.async = true;
+    // j.crossOrigin = 'anonymous';
+    j.src = 'https://www.googletagmanager.com/gtag/js?id=G-WCNGF2YB71';
+    j.onload = () => {
+      // console.log("onload");
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){
+        dataLayer.push(arguments);
       }
-    ],
-    [
-      'script',
-      {},
-      `
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){
-    dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'G-WCNGF2YB71');
-    gtag('config', 'G-WCNGF2YB71');
+      gtag('js', new Date());
+      gtag('config', 'G-WCNGF2YB71');
+      gtag('config', 'G-WCNGF2YB71');
+    };
+    j.onerror = (err) => {
+      console.log("onerror", err);
+    };
+
+    // Insere o script no DOM
+    f.parentNode.insertBefore(j, f);
+
+  })(window, document, 'script'); 
+
+}
     `],
-    // https://tagmanager.google.com/#/admin/accounts/491416460/containers/2618425/install?containerDraftId=6
-    [
-      'script',
-      {},
-      `
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PNT4KQ');
-    `],
-    // https://www.google.com/adsense/new/u/0/pub-7927094983433027/sites/detail/url=mozg.com.br
-    [
-      'script',
-      {
-        async: 'true',
-        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7927094983433027',
-        crossorigin: 'anonymous'
-      }
-    ],
+    
+    [ 'script', {}, `
+if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+  // console.log("Você está em localhost.");
+} else {
+  // console.log("Você não está em localhost.");
+
+  // https://tagmanager.google.com/#/admin/accounts/491416460/containers/2618425/install?containerDraftId=6
+
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PNT4KQ');
+
+  // https://www.google.com/adsense/new/u/0/pub-7927094983433027/sites/detail/url=mozg.com.br
+
+   (function(w,d,s,l,i) {
+    var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s);
+
+    // Define os atributos do script
+    j.async = true;
+    j.crossOrigin = 'anonymous';
+    j.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7927094983433027';
+    j.onload = () => {
+      // console.log("onload");
+ 
+    };
+    j.onerror = (err) => {
+      console.log("onerror", err);
+    };
+
+    // Insere o script no DOM
+    f.parentNode.insertBefore(j, f);
+
+  })(window, document, 'script'); 
+
+}
+    `], 
     // https://vitepress.dev/reference/site-config#example-registering-a-service-worker
     [
-      'script',
-      { id: 'register-sw' },
-      `
-// ;(() => {      
-// if ("serviceWorker" in navigator) {
-//   navigator.serviceWorker.getRegistrations().then((registrations) => {
-//     if (registrations.length === 0) {
-//       navigator.serviceWorker
-//         .register("/service-worker.js")
-//         .then((registration) => {
-//           console.log("Service Worker registrado com sucesso:");
-//         })
-//         .catch((error) => {
-//           console.error("Falha ao registrar o Service Worker:", error);
-//         });
-//     } else {
-//       console.log("Service Worker já registrado");
-//     }
-//   });
-// }
-// })()
+      'script', { id: 'register-sw' }, `
+if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+  // console.log("Você está em localhost.");
+} else {
+  // console.log("Você não está em localhost.");
+
+  ;(() => {      
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      if (registrations.length === 0) {
+        navigator.serviceWorker
+          .register("/service-worker.js")
+          .then((registration) => {
+            console.log("Service Worker registrado com sucesso:");
+          })
+          .catch((error) => {
+            console.error("Falha ao registrar o Service Worker:", error);
+          });
+      } else {
+        console.log("Service Worker já registrado");
+      }
+    });
+  }
+  })()
+
+}
   `],
     //
   ],

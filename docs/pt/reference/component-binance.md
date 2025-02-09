@@ -40,4 +40,6 @@ $ npm i @mozgbrasil/web-components
 
 ## **Veja o resultado**
 
-<Binance />
+<mozg-popover-popup toggle="autoIterateToggle(true)">
+    <mozg-binance></mozg-binance>
+</mozg-popover-popup>

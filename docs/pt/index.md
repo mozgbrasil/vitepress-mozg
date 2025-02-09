@@ -55,6 +55,7 @@ hero:
     }
   }
 
+  /*  */
   mozg-google-sign-in {
     display: flex;
     flex-wrap: wrap;
@@ -80,11 +81,9 @@ hero:
   ></iframe>
 </noscript>
 
-<p hidden>
-  ⛔ Your browser doesn't support <code>shadowrootmode</code> attribute yet.
-</p>
+<ShadowComponent />
 
-<!-- <ShadowComponent /> -->
+<mozg-squircle></mozg-squircle>
 
 <ClientOnly>
 <mozg-google-sign-in></mozg-google-sign-in>

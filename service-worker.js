@@ -10,13 +10,13 @@ const urlsToCache = [
 
 // Instalando o Service Worker e armazenando arquivos no cache
 self.addEventListener('install', (event) => {
-  console.log('Service Worker instalado')
+  // console.log('Service Worker instalado')
 
   event.waitUntil(
     caches
       .open(CACHE_NAME)
       .then((cache) => {
-        console.log('Arquivos em cache')
+        // console.log('Arquivos em cache')
         return cache.addAll(urlsToCache)
       })
       .catch((error) => {
@@ -27,7 +27,7 @@ self.addEventListener('install', (event) => {
 
 // Ativando o Service Worker e limpando caches antigos
 self.addEventListener('activate', (event) => {
-  console.log('Service Worker ativado')
+  // console.log('Service Worker ativado')
 
   const cacheWhitelist = [CACHE_NAME]
   event.waitUntil(
@@ -126,7 +126,7 @@ self.addEventListener('sync', (event) => {
       // Substitua pelo código de sincronização de dados em segundo plano
       fetch('/api/sync').then((response) => {
         if (response.ok) {
-          console.log('Sincronizado com sucesso em segundo plano')
+          // console.log('Sincronizado com sucesso em segundo plano')
         }
       })
     )
@@ -136,12 +136,12 @@ self.addEventListener('sync', (event) => {
 // Mensagens do cliente (Web Component)
 self.addEventListener('message', (event) => {
   if (event.data === 'simulateOffline') {
-    console.log('Modo offline ativado via Service Worker')
+    // console.log('Modo offline ativado via Service Worker')
     // Simulação de comportamento offline, cache as respostas
     event.waitUntil(
       caches.open(CACHE_NAME).then((cache) => {
         cache.match(event.request).then((response) => {
-          console.log('Respondendo com dados em cache:', response)
+          // console.log('Respondendo com dados em cache:', response)
           return response || fetch(event.request)
         })
       })

@@ -1,6 +1,6 @@
 class MyApp {
   constructor() {
-    console.log('MyApp inicializado!')
+    // console.log('MyApp inicializado!')
   }
 
   executeMethod(methodName) {
@@ -12,7 +12,7 @@ class MyApp {
   }
 
   Calc() {
-    console.log('Executando Calc!')
+    // console.log('Executando Calc!')
   }
 }
 
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //
 
 function autoIterateToggle(param) {
-  console.log('autoIterateToggle', param)
+  // console.log('autoIterateToggle', param)
   const autoIterateToggle = document
     .querySelector('mozg-popover-popup > mozg-binance')
     .shadowRoot.querySelector('#autoIterateToggle')

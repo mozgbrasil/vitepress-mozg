@@ -10,7 +10,7 @@ const urlsToCache = [
 
 // Instalando o Service Worker e armazenando arquivos no cache
 self.addEventListener('install', (event) => {
-  // console.log('Service Worker instalado')
+  console.log('Service Worker instalado')
 
   event.waitUntil(
     caches
@@ -27,7 +27,7 @@ self.addEventListener('install', (event) => {
 
 // Ativando o Service Worker e limpando caches antigos
 self.addEventListener('activate', (event) => {
-  // console.log('Service Worker ativado')
+  console.log('Service Worker ativado')
 
   const cacheWhitelist = [CACHE_NAME]
   event.waitUntil(
@@ -45,7 +45,8 @@ self.addEventListener('activate', (event) => {
 
 // Fetch: Tentativa de resposta do cache, senão busca na rede
 self.addEventListener('fetch', (event) => {
-  // console.log('Interceptando requisições', event)
+  return
+  console.log('Interceptando requisições', event)
 
   const requestUrl = new URL(event.request.url)
 

@@ -231,7 +231,7 @@ if (window.location.hostname === "localhost" || window.location.hostname === "12
 
 }
     `],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.42' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.43' }],
     // ['script', { type: 'module', src: 'http://192.168.1.10:5002/src/index.ts' }],
     // ['script', { src: 'http://localhost:5001/mozg-web-components.umd.js' }],
     // https://analytics.google.com/analytics/web/#/a73869264p474402691/admin/streams/table/10179988960

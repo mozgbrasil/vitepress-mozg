@@ -83,12 +83,17 @@ hero:
 
 <ShadowComponent />
 
-<mozg-squircle></mozg-squircle>
+<mozg-service-worker></mozg-service-worker>
+<mozg-web-worker></mozg-web-worker>
+<mozg-web-share></mozg-web-share>
+<mozg-monitor-connectivity></mozg-monitor-connectivity>
+<mozg-change-favicon></mozg-change-favicon>
+
+<mozg-google-sign-in></mozg-google-sign-in>
+<mozg-macosx-dock></mozg-macosx-dock>
+<mozg-my-vitepress></mozg-my-vitepress>
 
 <ClientOnly>
-<mozg-google-sign-in></mozg-google-sign-in>
-
-<mozg-macosx-dock></mozg-macosx-dock>
-
-<mozg-my-vitepress></mozg-my-vitepress>
 </ClientOnly>
+
+<mozg-squircle></mozg-squircle>

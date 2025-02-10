@@ -1,6 +1,6 @@
-<https://mozg.com.br/>
-<https://mozgbrasil.github.io/vitepress-mozg>
-<https://mozg-project.web.app/>
+- <https://mozg.com.br/>
+- <https://mozgbrasil.github.io/vitepress-mozg>
+- <https://mozg-project.web.app/>
 
 # VitePress 📝💨
 

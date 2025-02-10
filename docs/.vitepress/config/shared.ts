@@ -235,7 +235,7 @@ if (window.location.hostname === "localhost" || window.location.hostname === "12
     // ['script', { type: 'module', src: 'http://192.168.1.10:5002/src/index.ts' }],
     // ['script', { src: 'http://localhost:5001/mozg-web-components.umd.js' }],
     // https://analytics.google.com/analytics/web/#/a73869264p474402691/admin/streams/table/10179988960
-    [ 'script', {}, `
+    [ 'script', {}, ` 
 if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
   // console.log("Você está em localhost.");
 } else {

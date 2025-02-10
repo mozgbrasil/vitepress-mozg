@@ -97,53 +97,53 @@ if (window.location.hostname === "localhost" || window.location.hostname === "12
 } else {
   // console.log("Você não está em localhost.");
 
-  (function(w,d,s,l,i) {
-    var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s);
+  // (function(w,d,s,l,i) {
+  //   var f = d.getElementsByTagName(s)[0],
+  //       j = d.createElement(s);
 
-    // Define os atributos do script
-    j.async = true;
-    j.crossOrigin = 'anonymous';
-    j.src = 'https://js.sentry-cdn.com/248f36517c640f644a4030f19ae070c1.min.js';
-    j.onload = () => {
-      // console.log("onload");
+  //   // Define os atributos do script
+  //   j.async = true;
+  //   j.crossOrigin = 'anonymous';
+  //   j.src = 'https://js.sentry-cdn.com/248f36517c640f644a4030f19ae070c1.min.js';
+  //   j.onload = () => {
+  //     // console.log("onload");
 
-      window.sentryOnLoad = function () {
-        Sentry.init({
-          dsn: "https://248f36517c640f644a4030f19ae070c1@o435772.ingest.us.sentry.io/4508770207137792",
-          integrations: [
-            Sentry.feedbackIntegration({
-              // Additional SDK configuration goes in here, for example:
-              colorScheme: "system",
-              isNameRequired: true,
-              isEmailRequired: true,
-            }),
-          ],
-        });
+  //     window.sentryOnLoad = function () {
+  //       Sentry.init({
+  //         dsn: "https://248f36517c640f644a4030f19ae070c1@o435772.ingest.us.sentry.io/4508770207137792",
+  //         integrations: [
+  //           Sentry.feedbackIntegration({
+  //             // Additional SDK configuration goes in here, for example:
+  //             colorScheme: "system",
+  //             isNameRequired: true,
+  //             isEmailRequired: true,
+  //           }),
+  //         ],
+  //       });
 
-        Sentry.lazyLoadIntegration("feedbackIntegration")
-          .then((feedbackIntegration) => {
-            Sentry.addIntegration(
-              feedbackIntegration({
-                // User Feedback configuration options
-              })
-            );
-          })
-          .catch(() => {
-            // this can happen if e.g. a network error occurs,
-            // in this case User Feedback will not be enabled
-          });
-      };
+  //       Sentry.lazyLoadIntegration("feedbackIntegration")
+  //         .then((feedbackIntegration) => {
+  //           Sentry.addIntegration(
+  //             feedbackIntegration({
+  //               // User Feedback configuration options
+  //             })
+  //           );
+  //         })
+  //         .catch(() => {
+  //           // this can happen if e.g. a network error occurs,
+  //           // in this case User Feedback will not be enabled
+  //         });
+  //     };
 
-    };
-    j.onerror = (err) => {
-      console.error("onerror", err);
-    };
+  //   };
+  //   j.onerror = (err) => {
+  //     console.error("onerror", err);
+  //   };
   
-    // Insere o script no DOM
-    f.parentNode.insertBefore(j, f);
+  //   // Insere o script no DOM
+  //   f.parentNode.insertBefore(j, f);
 
-  })(window, document, 'script');
+  // })(window, document, 'script');
 
 } 
     `],
@@ -151,9 +151,29 @@ if (window.location.hostname === "localhost" || window.location.hostname === "12
 if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
   // console.log("Você está em localhost.");
 } else {
-  // console.log("Você não está em localhost. LogRocket");
+  // console.log("Você não está em localhost.");
 
-  
+  // (function(w,d,s,l,i) {
+  //   var f = d.getElementsByTagName(s)[0],
+  //       j = d.createElement(s);
+
+  //   // Define os atributos do script
+  //   j.async = true;
+  //   j.crossOrigin = 'anonymous';
+  //   j.src = 'https://cdn.lrkt-in.com/LogRocket.min.js';
+  //   j.onload = () => {
+  //     // console.log("onload");
+  //     window.LogRocket && window.LogRocket.init("vuieju/project-mozgcombr");
+  //   };
+  //   j.onerror = (err) => {
+  //     console.error("onerror", err);
+  //   };
+
+  //   // Insere o script no DOM
+  //   f.parentNode.insertBefore(j, f);
+
+  // })(window, document, 'script');
+
 }
     `],
     ['script', {}, `

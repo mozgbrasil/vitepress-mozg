@@ -72,20 +72,24 @@ hero:
   }
 </style>
 
+<noscript>
+<iframe
+src="https://www.googletagmanager.com/ns.html?id=GTM-PNT4KQ"
+height="0"
+width="0"
+style="display: none; visibility: hidden"></iframe>
+</noscript>
+
 <mozg-my-vitepress></mozg-my-vitepress>
 
- <noscript>
-    <iframe
-      src="https://www.googletagmanager.com/ns.html?id=GTM-PNT4KQ"
-      height="0"
-      width="0"
-      style="display: none; visibility: hidden"></iframe>
-  </noscript>
-
 <mozg-service-worker></mozg-service-worker>
+
 <mozg-web-worker></mozg-web-worker>
+
 <mozg-monitor-connectivity></mozg-monitor-connectivity>
+
 <mozg-change-favicon></mozg-change-favicon>
+
 <mozg-macosx-dock></mozg-macosx-dock>
 
 <mozg-squircle></mozg-squircle>

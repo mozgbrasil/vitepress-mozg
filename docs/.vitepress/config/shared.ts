@@ -85,7 +85,7 @@ export const shared = defineConfig({
       ;(() => {
         window.addEventListener("WebComponentsReady", function (e) {
           // imports are loaded and elements have been registered
-          console.log("Components are ready");
+          // console.log("Components are ready");
         });
       })()
     `],
@@ -137,7 +137,7 @@ if (window.location.hostname === "localhost" || window.location.hostname === "12
 
     };
     j.onerror = (err) => {
-      console.log("onerror", err);
+      console.error("onerror", err);
     };
   
     // Insere o script no DOM
@@ -166,7 +166,7 @@ if (window.location.hostname === "localhost" || window.location.hostname === "12
       window.LogRocket && window.LogRocket.init("vuieju/project-mozgcombr");
     };
     j.onerror = (err) => {
-      console.log("onerror", err);
+      console.error("onerror", err);
     };
 
     // Insere o script no DOM
@@ -221,7 +221,7 @@ if (window.location.hostname === "localhost" || window.location.hostname === "12
       });
     };
     j.onerror = (err) => {
-      console.log("onerror", err);
+      console.error("onerror", err);
     };
 
     // Insere o script no DOM
@@ -231,7 +231,7 @@ if (window.location.hostname === "localhost" || window.location.hostname === "12
 
 }
     `],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.43' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.44' }],
     // ['script', { type: 'module', src: 'http://192.168.1.10:5002/src/index.ts' }],
     // ['script', { src: 'http://localhost:5001/mozg-web-components.umd.js' }],
     // https://analytics.google.com/analytics/web/#/a73869264p474402691/admin/streams/table/10179988960
@@ -260,7 +260,7 @@ if (window.location.hostname === "localhost" || window.location.hostname === "12
       gtag('config', 'G-WCNGF2YB71');
     };
     j.onerror = (err) => {
-      console.log("onerror", err);
+      console.error("onerror", err);
     };
 
     // Insere o script no DOM
@@ -300,7 +300,7 @@ if (window.location.hostname === "localhost" || window.location.hostname === "12
  
     };
     j.onerror = (err) => {
-      console.log("onerror", err);
+      console.error("onerror", err);
     };
 
     // Insere o script no DOM
@@ -325,13 +325,13 @@ if (window.location.hostname === "localhost" || window.location.hostname === "12
         navigator.serviceWorker
           .register("/service-worker.js")
           .then((registration) => {
-            console.log("Service Worker registrado com sucesso:");
+            // console.log("Service Worker registrado com sucesso:");
           })
           .catch((error) => {
             console.error("Falha ao registrar o Service Worker:", error);
           });
       } else {
-        console.log("Service Worker já registrado");
+        // console.log("Service Worker já registrado");
       }
     });
   }

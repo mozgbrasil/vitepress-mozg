@@ -82,8 +82,6 @@ hero:
       style="display: none; visibility: hidden"></iframe>
   </noscript>
 
-<ShadowComponent />
-
 <mozg-service-worker></mozg-service-worker>
 <mozg-web-worker></mozg-web-worker>
 <mozg-monitor-connectivity></mozg-monitor-connectivity>
@@ -93,5 +91,5 @@ hero:
 <mozg-squircle></mozg-squircle>
 
 <ClientOnly>
-
+<ShadowComponent />
 </ClientOnly>

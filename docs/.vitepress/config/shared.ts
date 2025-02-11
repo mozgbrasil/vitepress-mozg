@@ -90,148 +90,6 @@ export const shared = defineConfig({
       })()
     `],
     ['link', { rel: 'stylesheet', href: '/tailwind.css' }],
- 
-    ['script', {}, `
-if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
-  // console.log("Você está em localhost.");
-} else {
-  // console.log("Você não está em localhost.");
-
-  // (function(w,d,s,l,i) {
-  //   var f = d.getElementsByTagName(s)[0],
-  //       j = d.createElement(s);
-
-  //   // Define os atributos do script
-  //   j.async = true;
-  //   j.crossOrigin = 'anonymous';
-  //   j.src = 'https://js.sentry-cdn.com/248f36517c640f644a4030f19ae070c1.min.js';
-  //   j.onload = () => {
-  //     // console.log("onload");
-
-  //     window.sentryOnLoad = function () {
-  //       Sentry.init({
-  //         dsn: "https://248f36517c640f644a4030f19ae070c1@o435772.ingest.us.sentry.io/4508770207137792",
-  //         integrations: [
-  //           Sentry.feedbackIntegration({
-  //             // Additional SDK configuration goes in here, for example:
-  //             colorScheme: "system",
-  //             isNameRequired: true,
-  //             isEmailRequired: true,
-  //           }),
-  //         ],
-  //       });
-
-  //       Sentry.lazyLoadIntegration("feedbackIntegration")
-  //         .then((feedbackIntegration) => {
-  //           Sentry.addIntegration(
-  //             feedbackIntegration({
-  //               // User Feedback configuration options
-  //             })
-  //           );
-  //         })
-  //         .catch(() => {
-  //           // this can happen if e.g. a network error occurs,
-  //           // in this case User Feedback will not be enabled
-  //         });
-  //     };
-
-  //   };
-  //   j.onerror = (err) => {
-  //     console.error("onerror", err);
-  //   };
-  
-  //   // Insere o script no DOM
-  //   f.parentNode.insertBefore(j, f);
-
-  // })(window, document, 'script');
-
-} 
-    `],
-    ['script', {}, `
-if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
-  // console.log("Você está em localhost.");
-} else {
-  // console.log("Você não está em localhost.");
-
-  // (function(w,d,s,l,i) {
-  //   var f = d.getElementsByTagName(s)[0],
-  //       j = d.createElement(s);
-
-  //   // Define os atributos do script
-  //   j.async = true;
-  //   j.crossOrigin = 'anonymous';
-  //   j.src = 'https://cdn.lrkt-in.com/LogRocket.min.js';
-  //   j.onload = () => {
-  //     // console.log("onload");
-  //     window.LogRocket && window.LogRocket.init("vuieju/project-mozgcombr");
-  //   };
-  //   j.onerror = (err) => {
-  //     console.error("onerror", err);
-  //   };
-
-  //   // Insere o script no DOM
-  //   f.parentNode.insertBefore(j, f);
-
-  // })(window, document, 'script');
-
-}
-    `],
-    ['script', {}, `
-if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
-  // console.log("Você está em localhost.");
-} else {
-  // console.log("Você não está em localhost.");
-
-  ;(function (h, o, t, j, a, r) {
-    h.hj =
-      h.hj ||
-      function () {
-        (h.hj.q = h.hj.q || []).push(arguments);
-      };
-    h._hjSettings = { hjid: 5294163, hjsv: 6 };
-    a = o.getElementsByTagName("head")[0];
-    r = o.createElement("script");
-    r.async = 1;
-    r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-    a.appendChild(r);
-  })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-
-}
-    `],
-    ['script', {}, `
-if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
-  // console.log("Você está em localhost.");
-} else {
-  // console.log("Você não está em localhost.");
-
-
-  (function(w,d,s,l,i) {
-    var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s);
-
-    // Define os atributos do script
-    j.async = true;
-    j.crossOrigin = 'anonymous';
-    j.src = 'https://cdn.amplitude.com/script/5bc76c5d1a252c44d2396b1b42a1d507.js';
-    j.onload = () => {
-      // console.log("onload");
-      window.amplitude.add(window.sessionReplay.plugin({ sampleRate: 1 }));
-      window.amplitude.init("5bc76c5d1a252c44d2396b1b42a1d507", {
-        fetchRemoteConfig: true,
-        autocapture: true,
-      });
-    };
-    j.onerror = (err) => {
-      console.error("onerror", err);
-    };
-
-    // Insere o script no DOM
-    f.parentNode.insertBefore(j, f);
-
-  })(window, document, 'script'); 
-
-}
-    `],
     ['script', { src: 'https://cdn.jsdelivr.net/npm/@mozgbrasil/web-components@1.0.47' }],
     // ['script', { type: 'module', src: 'http://192.168.1.10:5002/src/index.ts' }],
     // ['script', { src: 'http://localhost:5001/mozg-web-components.umd.js' }],
@@ -270,8 +128,7 @@ if (window.location.hostname === "localhost" || window.location.hostname === "12
   })(window, document, 'script'); 
 
 }
-    `],
-    
+    `],    
     [ 'script', {}, `
 if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
   // console.log("Você está em localhost.");
@@ -340,6 +197,149 @@ if (window.location.hostname === "localhost" || window.location.hostname === "12
 
 }
   `],
+  ['script', {}, `
+    if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+      // console.log("Você está em localhost.");
+    } else {
+      // console.log("Você não está em localhost.");
+    
+      // (function(w,d,s,l,i) {
+      //   var f = d.getElementsByTagName(s)[0],
+      //       j = d.createElement(s);
+    
+      //   // Define os atributos do script
+      //   j.async = true;
+      //   j.crossOrigin = 'anonymous';
+      //   j.src = 'https://js.sentry-cdn.com/248f36517c640f644a4030f19ae070c1.min.js';
+      //   j.onload = () => {
+      //     // console.log("onload");
+    
+      //     window.sentryOnLoad = function () {
+      //       Sentry.init({
+      //         dsn: "https://248f36517c640f644a4030f19ae070c1@o435772.ingest.us.sentry.io/4508770207137792",
+      //         integrations: [
+      //           Sentry.feedbackIntegration({
+      //             // Additional SDK configuration goes in here, for example:
+      //             colorScheme: "system",
+      //             isNameRequired: true,
+      //             isEmailRequired: true,
+      //           }),
+      //         ],
+      //       });
+    
+      //       Sentry.lazyLoadIntegration("feedbackIntegration")
+      //         .then((feedbackIntegration) => {
+      //           Sentry.addIntegration(
+      //             feedbackIntegration({
+      //               // User Feedback configuration options
+      //             })
+      //           );
+      //         })
+      //         .catch(() => {
+      //           // this can happen if e.g. a network error occurs,
+      //           // in this case User Feedback will not be enabled
+      //         });
+      //     };
+    
+      //   };
+      //   j.onerror = (err) => {
+      //     console.error("onerror", err);
+      //   };
+      
+      //   // Insere o script no DOM
+      //   f.parentNode.insertBefore(j, f);
+    
+      // })(window, document, 'script');
+    
+    } 
+    `],
+    ['script', {}, `
+    if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+      // console.log("Você está em localhost.");
+    } else {
+      // console.log("Você não está em localhost.");
+    
+      // (function(w,d,s,l,i) {
+      //   var f = d.getElementsByTagName(s)[0],
+      //       j = d.createElement(s);
+    
+      //   // Define os atributos do script
+      //   j.async = true;
+      //   j.crossOrigin = 'anonymous';
+      //   j.src = 'https://cdn.lrkt-in.com/LogRocket.min.js';
+      //   j.onload = () => {
+      //     // console.log("onload");
+      //     window.LogRocket && window.LogRocket.init("vuieju/project-mozgcombr");
+      //   };
+      //   j.onerror = (err) => {
+      //     console.error("onerror", err);
+      //   };
+    
+      //   // Insere o script no DOM
+      //   f.parentNode.insertBefore(j, f);
+    
+      // })(window, document, 'script');
+    
+    }
+    `],
+    ['script', {}, `
+    if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+      // console.log("Você está em localhost.");
+    } else {
+      // console.log("Você não está em localhost.");
+    
+      ;(function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 5294163, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    
+    }
+        `],
+        ['script', {}, `
+    if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+      // console.log("Você está em localhost.");
+    } else {
+      // console.log("Você não está em localhost.");
+    
+    
+      (function(w,d,s,l,i) {
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s);
+    
+        // Define os atributos do script
+        j.async = true;
+        j.crossOrigin = 'anonymous';
+        j.src = 'https://cdn.amplitude.com/script/5bc76c5d1a252c44d2396b1b42a1d507.js';
+        j.onload = () => {
+          // console.log("onload");
+          window.amplitude.add(window.sessionReplay.plugin({ sampleRate: 1 }));
+          window.amplitude.init("5bc76c5d1a252c44d2396b1b42a1d507", {
+            fetchRemoteConfig: true,
+            autocapture: true,
+          });
+        };
+        j.onerror = (err) => {
+          console.error("onerror", err);
+        };
+    
+        // Insere o script no DOM
+        f.parentNode.insertBefore(j, f);
+    
+      })(window, document, 'script'); 
+    
+    }
+        `],
+
+
     //
   ],
   themeConfig: {

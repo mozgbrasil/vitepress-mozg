@@ -65,12 +65,17 @@ function nav(): DefaultTheme.NavItem[] {
     },
     {
       text: 'Web Components',
-      link: '/reference/web-components',
+      link: '/reference/component',
       activeMatch: '/reference/'
     },
     {
       text: 'Aplicativo móvel',
-      link: '/reference/mobile-apps',
+      link: '/reference/app',
+      activeMatch: '/reference/'
+    },
+    {
+      text: 'Backend API',
+      link: '/reference/backend-api',
       activeMatch: '/reference/'
     },
     {
@@ -99,8 +104,9 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         { text: 'Experimente', link: 'getting-started' }
       ]
     },
-    { text: 'Web Components', base: '/reference/', link: 'web-components' },
-    { text: 'Aplicativo móvel', base: '/reference/', link: 'mobile-apps' }
+    { text: 'Web Components', base: '/reference/', link: 'component' },
+    { text: 'Aplicativo móvel', base: '/reference/', link: 'app' },
+    { text: 'Backend API', base: '/reference/', link: 'backend-api' }
   ]
 }
 
@@ -109,7 +115,7 @@ function sidebarReference(): DefaultTheme.SidebarItem[] {
     {
       text: 'Referência',
       items: [
-        { text: 'Web Components', link: 'web-components' },
+        { text: 'Web Components', link: 'component' },
         {
           text: 'Componentes',
           base: '/reference/component-',
@@ -118,7 +124,7 @@ function sidebarReference(): DefaultTheme.SidebarItem[] {
             { text: 'Binance', link: 'binance' }
           ]
         },
-        { text: 'Aplicativo móvel', link: 'mobile-apps' },
+        { text: 'Aplicativo móvel', link: 'app' },
         {
           text: 'Apps',
           base: '/reference/app-',
@@ -126,6 +132,17 @@ function sidebarReference(): DefaultTheme.SidebarItem[] {
             { text: 'Mozg PWA', link: 'mozg-pwa' },
             { text: 'Mozg TWA', link: 'mozg-twa' },
             { text: 'Mozg Híbrido', link: 'mozg-hibrido' }
+          ]
+        },
+        { text: 'Backend API', link: 'backend-api' },
+        {
+          text: 'API',
+          base: '/reference/backend-',
+          items: [
+            { text: 'API Express.js', link: 'api-node' },
+            { text: 'API NestJS', link: 'api-nest' },
+            { text: 'API Django', link: 'api-django' },
+            { text: 'API Spring', link: 'api-spring' }
           ]
         }
       ]

@@ -10,7 +10,7 @@ description: Sistemas e informação
 
 # Express.js
 
-- Requerimentos
+- Stack
   - [Node.js](https://nodejs.org/)
     - [Express.js](https://expressjs.com/)
     - [OpenAPI](https://www.openapis.org/)

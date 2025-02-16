@@ -10,7 +10,7 @@ description: Sistemas e informação
 
 # Django
 
-- Requerimentos
+- Stack
   - [Python](https://www.python.org/)
     - [Django](https://www.djangoproject.com/)
     - [OpenAPI](https://www.openapis.org/)

@@ -10,7 +10,7 @@ description: Sistemas e informação
 
 # Spring Boot
 
-- Requerimentos
+- Stack
   - [Java](https://www.java.com/)
     - [Spring Boot](https://spring.io/projects/spring-boot)
     - [OpenAPI](https://www.openapis.org/)

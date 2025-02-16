@@ -10,7 +10,7 @@ description: Sistemas e informação
 
 # NestJS
 
-- Requerimentos
+- Stack
   - [Node.js](https://nodejs.org/)
     - [NestJS](https://nestjs.com/)
     - [OpenAPI](https://www.openapis.org/)

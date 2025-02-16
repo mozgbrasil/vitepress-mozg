@@ -10,6 +10,13 @@ description: Sistemas e informação
 
 # Express.js
 
-- [OpenAPI](https://www.openapis.org/)
+- Requerimentos
+  - [Node.js](https://nodejs.org/)
+    - [Express.js](https://expressjs.com/)
+    - [OpenAPI](https://www.openapis.org/)
+- Deploy
+  - [Vercel](https://vercel.com/)
+
+## Veja o resultado
 
 https://nx-express.vercel.app/

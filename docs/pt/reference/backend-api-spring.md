@@ -8,17 +8,19 @@ description: Sistemas e informação
 
 ![valid XHTML][checkmark]
 
-# Spring
+# Spring Boot
 
-## Spring
-
--
-- API [Spring Boot](https://spring.io/projects/spring-boot) está rodando com [OpenAPI](https://www.openapis.org/)
-
-## Deploy
-
-- [Render](https://render.com/)
+- Requerimentos
+  - [Java](https://www.java.com/)
+    - [Spring Boot](https://spring.io/projects/spring-boot)
+    - [OpenAPI](https://www.openapis.org/)
+- Deploy
+  - [Render with Web Services and Docker](https://render.com/)
+  - [Railway](https://railway.com/)
+  - [Supabase with Postgres](https://supabase.com/)
 
 ## Veja o resultado
 
-- https://java-spring-o93o.onrender.com/
+https://java-spring-sd07.onrender.com/
+
+https://java-spring-production-96db.up.railway.app/

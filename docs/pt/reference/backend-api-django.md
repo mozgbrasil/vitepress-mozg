@@ -10,6 +10,13 @@ description: Sistemas e informação
 
 # Django
 
-- [OpenAPI](https://www.openapis.org/)
+- Requerimentos
+  - [Python](https://www.python.org/)
+    - [Django](https://www.djangoproject.com/)
+    - [OpenAPI](https://www.openapis.org/)
+- Deploy
+  - [Vercel](https://vercel.com/)
+
+## Veja o resultado
 
 https://python-django-topaz.vercel.app/
